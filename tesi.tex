@@ -28,6 +28,7 @@
 \PassOptionsToPackage{dvipsnames}{xcolor} % colori PDF/A
 
 \usepackage{colorprofiles}
+\usepackage{multirow}
 
 \usepackage[a-2b,mathxmp]{pdfx}[2018/12/22]
                                         % configurazione PDF/A
@@ -99,6 +100,9 @@
                                         % 1. compilare una prima volta tesi.tex;
                                         % 2. eseguire: biber tesi
                                         % 3. compilare ancora tesi.tex.
+
+
+\renewcommand\tabularxcolumn[1]{m{#1}}% for vertical centering text in X column
 
 \input{tesi-config}                     % file con le impostazioni personali
 
