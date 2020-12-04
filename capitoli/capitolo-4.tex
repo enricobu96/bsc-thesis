@@ -9,19 +9,19 @@
 
 \section{Soddisfacimento degli obiettivi}
 
-Una volta conclusi tutti i processi e le attività di sviluppo e documentazione ho analizzato insieme al tutor aziendale gli obiettivi fissati ad inizio \textit{stage}, al fine di individuare il grado di soddisfacimento di questi e poter effettuare un'analisi a posteriori di cosa avrei potuto gestire meglio. In questa tabella sono riportati gli obiettivi fissati, il loro grado di soddisfacimento e una breve nota che sintetizza questo soddisfacimento. \\
+Una volta conclusi tutti i processi e le attività di sviluppo e documentazione ho analizzato insieme al tutor aziendale gli obiettivi fissati ad inizio \textit{stage}, al fine di individuarne il grado di soddisfacimento e poter effettuare un'analisi a posteriori di cosa avrei potuto gestire meglio. In questa tabella sono riportati gli obiettivi fissati, il loro grado di soddisfacimento e una breve nota che sintetizza questo soddisfacimento. \\
 
 \begin{table}[h]
   \begin{center}
-\begin{tabular}{lll}
+\begin{tabular}{llp{8cm}}
 \textbf{Obiettivo}         & \textbf{Risultato}               & \textbf{Note}            \\ \hline
-\multicolumn{1}{|l|}{\texttt{O-O1}} & \multicolumn{1}{l|}{Soddisfatto} & \multicolumn{1}{l|}{ABC} \\ \hline
-\multicolumn{1}{|l|}{\texttt{O-O2}} & \multicolumn{1}{l|}{Soddisfatto} & \multicolumn{1}{l|}{DEF} \\ \hline
-\multicolumn{1}{|l|}{\texttt{O-O3}} & \multicolumn{1}{l|}{Soddisfatto} & \multicolumn{1}{l|}{GHI} \\ \hline
-\multicolumn{1}{|l|}{\texttt{O-D1}} & \multicolumn{1}{l|}{Soddisfatto} & \multicolumn{1}{l|}{LMN} \\ \hline
-\multicolumn{1}{|l|}{\texttt{O-D2}} & \multicolumn{1}{l|}{Soddisfatto} & \multicolumn{1}{l|}{OPQ} \\ \hline
-\multicolumn{1}{|l|}{\texttt{O-F1}} & \multicolumn{1}{l|}{Soddisfatto} & \multicolumn{1}{l|}{RST} \\ \hline
-\multicolumn{1}{|l|}{\texttt{O-F2}} & \multicolumn{1}{l|}{Soddisfatto} & \multicolumn{1}{l|}{UVZ} \\ \hline
+\multicolumn{1}{|l|}{\texttt{O-O1}} & \multicolumn{1}{l|}{Soddisfatto} & \multicolumn{1}{p{8cm}|}{Ho correttamente acquisito le competenze su tutti i linguaggi di programmazione, i \textit{framework} e gli strumenti di supporto previsti dal piano di lavoro} \\ \hline
+\multicolumn{1}{|l|}{\texttt{O-O2}} & \multicolumn{1}{l|}{Soddisfatto} & \multicolumn{1}{p{8cm}|}{Ho correttamente seguito il cronoprogramma in autonomia, impiegando anche meno tempo di quanto previsto} \\ \hline
+\multicolumn{1}{|l|}{\texttt{O-O3}} & \multicolumn{1}{l|}{Soddisfatto} & \multicolumn{1}{p{8cm}|}{Ho portato a termine le implementazioni previste con una percentuale di superamento pari al 100\%, arrivando a sviluppare anche funzionalità aggiuntive} \\ \hline
+\multicolumn{1}{|l|}{\texttt{O-D1}} & \multicolumn{1}{l|}{Soddisfatto} & \multicolumn{1}{p{8cm}|}{Come sopra} \\ \hline
+\multicolumn{1}{|l|}{\texttt{O-D2}} & \multicolumn{1}{l|}{Soddisfatto} & \multicolumn{1}{p{8cm}|}{Ho effettuato la corretta containerizzazione della componente \textit{back-end} del progetto \textit{SyncTrace}, rendendo disponibili anche le interfacce grafiche per la gestione dei microservizi da cui è composto e del \textit{database}} \\ \hline
+\multicolumn{1}{|l|}{\texttt{O-F1}} & \multicolumn{1}{l|}{Soddisfatto} & \multicolumn{1}{p{8cm}|}{Ho effettuato una corretta progettazione che ha reso l'applicazione sviluppata usabile, \textit{responsive} e \textit{adaptive}} \\ \hline
+\multicolumn{1}{|l|}{\texttt{O-F2}} & \multicolumn{1}{l|}{Soddisfatto} & \multicolumn{1}{p{8cm}|}{Ho implementato correttamente la lettura del \textit{QR Code} direttamente della fotocamera. Per ragioni di compatibilità con le scelte di ogni utente, ho inoltre reso disponibile anche l'inserimento manuale del codice} \\ \hline
 \end{tabular}
 \end{center}
 \caption{Grado di soddisfacimento degli obiettivi di \textit{stage}.}
@@ -30,19 +30,21 @@ Una volta conclusi tutti i processi e le attività di sviluppo e documentazione 
 Mi sono inoltre impegnato a consegnare tutti i prodotti richiesti dall'azienda; questi sono riassunti dalla seguente tabella.
 
 \begin{table}[h]
-    \begin{center}
-\begin{tabularx}{\textwidth}{lX}
-\textbf{Prodotto}                        & \textbf{Note}                                                                                                                                                                                                                                                                                                                                    \\ \hline
-\multicolumn{1}{|l|}{Codice}             & \multicolumn{1}{l|}{Durante tutto il processo di sviluppo ho utilizzato il repository aziendale riservato agli stage. Ho quindi consegnato ufficialmente il codice effettuando il merge dei branch da me creati sul master branch}                                                                                                               \\ \hline
-\multicolumn{1}{|l|}{Documentazione}     & \multicolumn{1}{l|}{La documentazione che ho consegnato consiste nella documentazione tecnica. Questa è integrata nei file contenenti il codice, e ho provveduto ad automatizzarne la visualizzazione, con il tool Compodoc, tramite la creazione di uno script npm}                                                                             \\ \hline
-\multicolumn{1}{|l|}{Containerizzazione} & \multicolumn{1}{l|}{Per quanto concerne la containerizzazione, ho rilasciato sul repository precedentemente citato due file yml che, eseguiti tramite docker compose, costruiscono e mettono a disposizione rispettivamente la componente back-end di SyncTrace e le interfacce grafiche per la gestione dei microservizi Spring e del database} \\ \hline
-\end{tabularx}
+  \begin{center}
+  \begin{tabular}{lp{9cm}}
+  \textbf{Prodotto}                        & \textbf{Note}                                                                                                                                                                                                                                                                                                                                    \\ \hline
+  \multicolumn{1}{|l|}{Codice}             & \multicolumn{1}{p{9cm}|}{Durante tutto il processo di sviluppo ho utilizzato il repository aziendale riservato agli stage. Ho quindi consegnato ufficialmente il codice effettuando il merge dei branch da me creati sul master branch}                                                                                                               \\ \hline
+  \multicolumn{1}{|l|}{Documentazione}     & \multicolumn{1}{p{9cm}|}{La documentazione che ho consegnato consiste nella documentazione tecnica. Questa è integrata nei file contenenti il codice, e ho provveduto ad automatizzarne la visualizzazione, con il tool Compodoc, tramite la creazione di uno script npm}                                                                             \\ \hline
+  \multicolumn{1}{|l|}{Containerizzazione} & \multicolumn{1}{p{9cm}|}{Per quanto concerne la containerizzazione, ho rilasciato sul repository precedentemente citato due file yml che, eseguiti tramite docker compose, costruiscono e mettono a disposizione rispettivamente la componente back-end di SyncTrace e le interfacce grafiche per la gestione dei microservizi Spring e del database} \\ \hline
+  \end{tabular}
 \end{center}
-\end{table}
-% Alla conclusione dello stage ho analizzato insieme al mio tutor...
-% Tabella obiettivi con descrizione
-% Per quanto riguarda i prodotti completati...applicazione (pienamente funzionante), containerizzazione (due file yml), documentazione (doc coverage 100%)
-% Posso quindi dirmi soddisfatto perché ho soddisfatto tutto. Unica pecca mancanza di alcune parti di documentazione + praticamente solo smartworking
+\caption{Prodotti sviluppati e messi a disposizione dell'azienda.}
+  \end{table}
+
+In conclusione posso ritenermi soddisfatto di quanto svolto, poiché sono riuscito a completare tutti i prodotti richiesti nel tempo prestabilito e con il massimo grado di soddisfacimento degli obiettivi. \\
+Ho riscontrato soltanto due problematiche: una riguardante tutto lo \textit{stage} e una riguardante soltanto l'attività di analisi dei requisiti. La prima è che, purtroppo, ho dovuto svolgere gran parte del mio lavoro in \textit{smart working}, non potendo accedere alla sede per la maggior parte delle giornate lavorative. Per quanto sia comunque riuscito a organizzarmi al meglio per lavorare da casa, infatti, avrei preferito frequentare maggiormente l'azienda, poiché quando mi sono recato di persona ho potuto constatare un clima costruttivo e di collaborazione, a mio parere importante per la mia crescita lavorativa. Naturalmente, questo non è imputabile all'azienda ma al periodo attuale; giudico infatti responsabile questa scelta da parte dell'azienda. \\
+La seconda problematica che ho riscontrato riguarda l'analisi dei requisiti. Sebbene il prodotto su cui il mio progetto è basato offrisse una documentazione tecnica estremamente dettagliata e utile allo scopo, parte dell'analisi dei requisiti non è stata caricata sul \textit{repository} aziendale, e questo ha rallentato lievemente la mia attività di analisi dei requisiti.
+
 
 %**************************************************************
 
@@ -50,18 +52,18 @@ Mi sono inoltre impegnato a consegnare tutti i prodotti richiesti dall'azienda; 
 
 \subsection{Maturazione professionale}
 
-% durante lo stage ho approfondito molte cose...
-% per quanto riguarda le tecnologie...
-% - approfondimento di typescript
-% - angular e ionic
-% - docker
-% - in minor parte java, spring, postgres
-% Inoltre...scrum
-% Infine...gestione del lavoro & lavoro reale
+Lo \textit{stage} che ho effettuato mi ha portato a sviluppare diverse competenze, sia di natura tecnica che professionale. \\
+Per quanto riguarda le \textbf{tecnologie} che ho appreso durante il mio periodo in azienda ci sono anzitutto quelle che riguardano \textit{JavaScript} e tutto ciò che ne deriva: ho infatti approfondito il linguaggio \textit{TypeScript}, arrivando ad averne una conoscenza abbastanza estesa, e  soprattutto ho appreso il funzionamento dei \textit{framework Angular} e \textit{Ionic}. Di questi ultimi due sono arrivato ad avere una conoscenza di buon livello, applicabile anche al mio futuro lavorativo, poiché ho effettuato la codifica del prodotto software in maniera paragonabile allo sviluppo di un applicativo reale e vendibile da un'azienda. \\
+Ho inoltre studiato e utilizzato correttamente \textit{Docker}, strumento sempre più utilizzato dalle aziende per la grande scalabilità che offre durante il processo di sviluppo. Ho infine conosciuto, seppur superficialmente, altre tecnologie molto utilizzate odiernamente dalle aziende; tra queste posso citare il linguaggio \textit{Java}, il \textit{framework Spring} e il \textit{database} relazionale \textit{PostgreSQL}. \\
+Per quanto riguarda le competenze di \textbf{natura professionale}, ho potuto toccare con mano il funzionamento della metodologia \textit{Agile}, che in Sync Lab si realizza con l'adozione del metodo \textit{Scrum}; anche questo modello di sviluppo è sempre più utilizzato dalle aziende moderne, poiché permette molta flessibilità permettendo al contempo di raggiungere alti livelli di produttività e qualità. \\
+Un'ultima competenza che ho acquisito è definibile con il termine, generico ma corretto, \textit{soft skills}; in questo rientrano i rapporti con i colleghi e con i responsabili, l'organizzazione reale del lavoro e la suddivisione dei compiti all'interno dell'azienda.
 
-% Descrizione delle competenze professionali acquisite, sia in termini di tecnologie imparate che di abilità nella gestione del lavoro. In questo capitolo parlerò dunque dei linguaggi di programmazione, dei framework e delle infrastrutture che ho conosciuto e imparato a utilizzare e/o di cui ho imparato l'utilizzo in un contesto reale come è il tirocinio in azienda.
 
 \subsection{Rapporto tra università e lavoro}
+
+Come ho esposto a inizio documento, lo \textit{stage} è una parte fondamentale del percorso formativo di uno studente; questo periodo, infatti, permette di uscire dagli schemi vissuti durante i precedenti anni di università, potendo toccare con mano la vita lavorativa all'infuori di essa. Lo \textit{stage} e lo studio accademico sono, a mio parere, complementari, poiché uno \textit{stage} non può essere effettuato al meglio senza il percorso formativo accademico che lo precede, e quest'ultimo non può dirsi concluso finché non viene effettuato uno \textit{stage}. \\
+Ritengo che la formazione accademica mi sia risultata utile principalmente per la \textit{forma mentis} che mi ha dato; più precisamente, è mia opinione che una componente fondamentale, necessaria allo svolgimento di un tirocinio, sia l'attitudine al lavoro e al rispetto delle tempistiche previste. In questo vedo un'analogia soprattutto con il corso di Ingegneria del Software, più nello specifico con il progetto didattico: sebbene molto spesso, per lo sviluppo del prodotto richiesto dal progetto, venga adottato un modello incrementale (e di conseguenza non \textit{Agile}), ritengo che la conoscenza dei processi e delle attività che portano alla realizzazione di un prodotto software sia di grande aiuto per comprendere anche metodologie diverse. Oltre a questo, la parte teorica di tale corso aiuta a comprendere meglio anche la metodologia che Sync Lab utilizza. \\
+Per quanto riguarda la conoscenza delle tecnologie, invece, ho riscontrato una carenza da parte del percorso universitario che ho affrontato; avendo sviluppato un prodotto tramite l'utilizzo di tecnologie pensate per il web, non ho potuto non fare un parallelismo con quanto studiato durante il corso apposito del corso di laurea. Sebbene sia vero che le tecnologie, soprattutto in questo ambito, sono in continua evoluzione e quindi risulta difficile studiarne una che non diventi obsoleta in relativamente poco tempo, ritengo che sarebbe comunque stato utile approfondire lo sviluppo tramite \textit{framework} durante il mio percorso accademico.
 
 % forma mentis e attitudine al lavoro, soprattutto grazie a SWE
 % per quanto riguarda le tecnologie ho invece trovato una carenza, perché in università non ho mai avuto modo di studiare approfonditamente js e framework più all'avanguardia come angular, ad eccezione di ingegneria del software (che però non fa statistica perché non tutti fanno il progetto su ste robe e lo scopo principale del corso a mio parere non è apprendere nuove tecnologie ma sapersi organizzare). Buono html, carenza anche per css
