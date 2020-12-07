@@ -170,8 +170,8 @@ Considerando che molti dei requisiti funzionali individuati implicano anche nume
 %**************************************************************
 
 \section{Progettazione}
-
 Anche per quanto riguarda le scelte progettuali, essendo il mio progetto la continuazione di un progetto già concluso non ho avuto molto spazio di manovra. Ho però potuto riprogettare l'intera interfaccia grafica dell'applicativo per meglio conformarsi all'utilizzo \textit{mobile} di questo. \\
+
 Prima di procedere alla progettazione vera e propria e alla codifica, ho sviluppato un \textit{mockup} dell'applicazione; poiché le funzionalità offerte dal sistema erano già state definite durante il precedente \textit{stage} su tale progetto, la mia attenzione in questo momento si è rivolta unicamente all'aspetto grafico dell'applicazione che avrei dovuto sviluppare. Per fare ciò ho quindi usato un programma di \textit{sketching}, chiamato \textit{WireframeSketcher}\footcite{tec:wireframesketcher}, per abbozzare l'idea di come avrebbe dovuto essere l'applicazione. Questo programma permette di disegnare \textit{mockup} di siti web e applicazioni \textit{mobile} e \textit{desktop}, mettendo a disposizione numerosi \textit{asset}, quali ad esempio bottoni, campi di testo e \textit{label}, che possono essere facilmente utilizzati per disegnare bozze di applicativi utili ad avere una base di partenza per il successivo sviluppo. \\
 Con \textit{WireframeSketcher} ho disegnato le bozze di quasi tutte le maschere che poi ho implementato: ho infatti realizzato 12 maschere, e ho sviluppato la bozza di 10 di queste; questa disuguaglianza trova ragione in una iniziale malinterpretazione dell'applicativo da cui sono partito per lo sviluppo, riguardante le maschere di modifica e visualizzazione degli utenti infetti nel sistema. \\
 Non ho riportato questi \textit{mockup} nella documentazione ufficiale fornita come parte del prodotto all'azienda, ma mi sono stati utili per procedere senza indugi nella successiva attività di codifica. Nella \hyperref[img:appsketch]{Figura 3.5} riporto alcuni \textit{sketch} d'esempio. \\
@@ -182,9 +182,9 @@ Non ho riportato questi \textit{mockup} nella documentazione ufficiale fornita c
     \includegraphics[height=6cm]{immagini/appsketch}
   \captionof{figure}{Esempio di \textit{sketch} dell'applicazione realizzato con \textit{WireframeSketcher}.}
 \end{minipage} \\
-
 Come tratterò più approfonditamente nella prossima sezione, sebbene il mio progetto consistesse nella migrazione di una \textit{webapp Angular} su dispositivi mobili è vero anche che il \textit{framework} principale che ho utilizzato è diverso: la \textit{webapp}, infatti, è stata sviluppata totalmente tramite il \textit{framework Angular}, mentre l'applicazione oggetto del mio \textit{stage} è sviluppata tramite il \textit{framework Ionic} che utilizza alcune funzionalità del \textit{framework Angular}, ma è in sostanza una tecnologia diversa. \\
-La differenza più evidente tra \textit{Angular} e \textit{Ionic} è che il primo è pensato per lo sviluppo di \textit{single page application}, mentre il secondo è stato creato appositamente per lo sviluppo di applicazioni multipiattaforma, principalmente \textit{mobile}. \textit{Ionic} fa uso del \textit{framework Angular}, del \textit{framework React}\footcite{tec:react} o del \textit{framework Vue}\footcite{tec:vue} per quanto riguarda l'impostazione del progetto, la suddivisione in componenti e la gestione delle \textit{route} tra questi; a questo però aggiunge un sovrastrato per lo sviluppo di una componente \textit{front-end} ottimizzata per dispositivi mobili, \textit{reactive} e \textit{responsive}, composto da numerosi componenti grafici di cui la \hyperref[img:ioniclib]{Figura 3.6} è un esempio. \\
+
+La differenza più evidente tra \textit{Angular} e \textit{Ionic} è che il primo è pensato per lo sviluppo di \textit{single page application}, mentre il secondo è stato creato appositamente per lo sviluppo di applicazioni multipiattaforma, principalmente \textit{mobile}. \textit{Ionic} fa uso del \textit{framework Angular}, del \textit{framework React}\footcite{tec:react} o del \textit{framework Vue}\footcite{tec:vue} per quanto riguarda l'impostazione del progetto, la suddivisione in componenti e la gestione delle \textit{route} tra questi; a questo però aggiunge un superstrato per lo sviluppo di una componente \textit{front-end} ottimizzata per dispositivi mobili, \textit{reactive} e \textit{responsive}, composto da numerosi componenti grafici di cui la \hyperref[img:ioniclib]{Figura 3.6} è un esempio. \\
 
 \begin{minipage}{\linewidth}
   \label{img:ioniclib}
@@ -217,7 +217,6 @@ Una volta conclusa la progettazione sono passato subito all'attività di codific
     \includegraphics[height=5cm]{immagini/directory}
   \captionof{figure}{Porzioni di \textit{directory} contenente un progetto \textit{Ionic}.}
 \end{minipage} \\
-
 Per quanto riguarda lo sviluppo del codice dell'applicazione, ho anzitutto cominciato con le maschere di \textit{login} e \textit{signup}, per permettermi fin da subito di autenticarmi correttamente all'interno del sistema e poter quindi sviluppare le funzionalità previste da entrambi i ruoli. Per la codifica di queste ho fatto un riutilizzo quasi completo dei servizi precedentemente sviluppati, andando a modificare solamente le \textit{route} per permettermi di sviluppare anche la pagina di benvenuto, che viene presentata al primo avvio assoluto dell'applicazione e fintanto che l'utente non si autentica per la prima volta. La \hyperref[img:welcomeloginsignup]{Figura 3.8} mostra queste tre maschere. \\
 
 \begin{minipage}{\linewidth}
@@ -254,7 +253,7 @@ Una volta realizzata questa maschera ho proceduto alla realizzazione delle masch
   \captionof{figure}{In ordine: statistiche del sistema, gestione degli infetti e gestione dei contatti.}
 \end{minipage}\\
 
-Durante lo sviluppo delle maschere ho apportato diverse modifiche ai \textit{service} precedentemente sviluppati, al fine di renderli maggiormente compatibili con i dispositivi mobili. In particolare, ho completamente riscritto il servizio di \textit{alert}, poiché quelli nativi del \textit{framework Angular} non sono completamente funzionanti su dispositivi mobili. Al suo posto ho realizzato un servizio che fa uso delle librerie \textit{Ionic Native} per mostrare messaggi di \textit{alert} nativi per dispositivi \textit{Android} e \textit{iOS}. Ho inoltre realizzato un servizio di \textit{toast}, che permette di visualizzare messaggi da parte dell'applicazione sottoforma di \textit{toast}. Entrambi i servizi di avviso sono quindi visualizzati come elementi nativi del sistema operativo mobile, come la \hyperref[img:alert]{Figura 3.12} riporta. \\
+Durante lo sviluppo delle maschere ho apportato diverse modifiche ai \textit{service} precedentemente sviluppati, al fine di renderli maggiormente compatibili con i dispositivi mobili. In particolare, ho completamente riscritto il servizio di \textit{alert}, poiché quelli nativi del \textit{framework Angular} non sono completamente funzionanti su dispositivi mobili. Al suo posto ho realizzato un servizio che fa uso delle librerie \textit{Ionic Native} per mostrare messaggi di \textit{alert} nativi per dispositivi \textit{Android} e \textit{iOS}. Ho inoltre realizzato un servizio di \textit{toast}, che permette di visualizzare messaggi da parte dell'applicazione sotto forma di \textit{toast}. Entrambi i servizi di avviso sono quindi visualizzati come elementi nativi del sistema operativo mobile, come la \hyperref[img:alert]{Figura 3.12} riporta. \\
 
 \begin{minipage}{\linewidth}
   \label{img:alert}
@@ -311,6 +310,7 @@ Ho utilizzato il \textit{linter} per tutti i \textit{file TypeScript} dell'appli
 \subsection{Test di unità}
 
 Parallelamente all'analisi statica ho sviluppato anche dei test di unità; questi sono test che permettono di verificare le singole unità (\textit{i.e.} funzioni, metodi e classi) al fine di determinare se tali unità si comportano nella maniera desiderata. \\
+
 Per realizzare i test di unità ho utilizzato gli strumenti nativi di \textit{Angular}. Questo \textit{framework}, e di conseguenza anche \textit{Ionic}, al momento della generazione di un componente genera anche il codice \textit{boilerplate} per l'implementazione di questi test, di cui la \hyperref[img:jasminetest]{Figura 3.14} è un esempio; nello specifico, per ogni \textit{file} contenente codice \textit{TypeScript} viene generato parallelamente un altro \textit{file TypeScript} con lo stesso nome, a cui viene aggiunto il termine \textit{spec} a indicare che si tratta di un \textit{file} contenente test. \\
 
 \begin{minipage}{\linewidth}
@@ -338,7 +338,6 @@ In totale ho realizzato 44 test di unità, alcuni dei quali (principalmente dell
 Contemporaneamente all'avvio del processo di verifica ho cominciato anche il processo di collaudo, al fine di verificare il funzionamento di tutte le funzionalità anche su dispositivi mobili. Una volta concluso il collaudo sono passato alla validazione, momento in cui ho analizzato insieme al tutor esterno tutti i requisiti che avevo precedentemente definito.
 
 \subsection*{Collaudo}
-
 Come anticipato, parallelamente alla realizzazione dei test di unità e all'analisi statica del codice ho anche collaudato l'applicazione su un dispositivo \textit{mobile}. Vale la pena puntualizzare che non ho effettuato la codifica dell'applicazione a \textit{black-box}, ossia senza controllare periodicamente i risultati di quanto sviluppato; il \textit{framework Ionic}, infatti, possiede una funzionalità di \textit{serve}, che permette la ricarica dinamica dell'applicativo ogniqualvolta venga fatta una modifica al codice. Questo applicativo, però, viene visualizzato in locale nella macchina sul quale sta venendo eseguito lo sviluppo, e più nello specifico viene visualizzato e utilizzato tramite \textit{browser web}, mostrato in \hyperref[img:ionicserve]{Figura 3.16}. Questo è un ottimo strumento di supporto all'attività di codifica, ma non permette di usare l'applicazione su un dispositivo mobile; alcune funzionalità native, infatti, non possono essere utilizzate. \\
 
 \begin{minipage}{\linewidth}
@@ -358,7 +357,7 @@ Verso la fine dell'attività di codifica ho quindi dovuto poter testare l'applic
   \captionof{figure}{Porzione del \textit{docker-compose} per i servizi del \textit{back-end}.}
 \end{minipage} \\
 
-Una volta effettuato il \textit{deployment} su un \textit{server} aziendale, quindi, sono passato al collaudo vero e proprio dell'applicazione. Ho fatto uso dello strumento \textit{Capacitor}\footcite{tec:capacitor}, ossia un \textit{runtime} che permette la trasposizione di codice \textit{TypeScript} utilizzato all'interno di un progetto \textit{Ionic} in un'applicazione \textit{Android}. Questa applicazione consiste in un \textit{wrapper} che effettua il \textit{render} di una \textit{webview} su dispositivi mobili \textit{Android}, e per l'installazione di questa sul mio dispostivo ho utilizzato \textit{adb} (\textit{Android Debug Bridge}), strumento che mi ha permesso di effettuare anche il \textit{debug} dell'applicazione. \\
+Una volta effettuato il \textit{deployment} su un \textit{server} aziendale, quindi, sono passato al collaudo vero e proprio dell'applicazione. Ho fatto uso dello strumento \textit{Capacitor}\footcite{tec:capacitor}, ossia un \textit{runtime} che permette la trasposizione di codice \textit{TypeScript} utilizzato all'interno di un progetto \textit{Ionic} in un'applicazione \textit{Android}. Questa applicazione consiste in un \textit{wrapper} che effettua il \textit{render} di una \textit{webview} su dispositivi mobili \textit{Android}, e per l'installazione di questa sul mio dispositivo ho utilizzato \textit{adb} (\textit{Android Debug Bridge}), strumento che mi ha permesso di effettuare anche il \textit{debug} dell'applicazione. \\
 Ho quindi redatto una lista di funzionalità di cui controllare il comportamento e l'ho seguita, determinando gli accorgimenti da intraprendere per rendere l'applicazione pienamente funzionante e usabile. Ho infine ripreso l'attività di codifica per correggere gli errori e i malfunzionamenti che sono risultati da questo collaudo.
 
 \subsection*{Validazione}

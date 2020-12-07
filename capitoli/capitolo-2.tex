@@ -33,7 +33,6 @@ Oltre a questo, il periodo è di vitale importanza anche per descrivere lo \text
 %**************************************************************
 
 \section{Lo scopo dello stage}
-
 In risposta alla situazione sanitaria, molte aziende del settore \textit{ICT} si sono attivate per sviluppare applicazioni e sistemi di \textit{contact tracing}. Il \textit{contact tracing}, rappresentato schematicamente in \hyperref[img:contacttracing]{Figura 2.1}, consiste nell'identificazione delle persone che potrebbero essere venute a contatto con una persona infetta, e nella successiva raccolta di ulteriori informazioni, quali vicinanza e tempo di esposizione, su tali contatti; il fine di questa pratica è aiutare il sistema sanitario a individuare i possibili contagi, arrivando a costruire un albero dei contatti per poter agire tempestivamente sula diffusione. \\
 
 \begin{minipage}{\linewidth}
@@ -45,6 +44,7 @@ In risposta alla situazione sanitaria, molte aziende del settore \textit{ICT} si
 \end{minipage} \\
 
 Tra le aziende che si sono mobilitate per questa causa c'è anche Sync Lab, che ha avviato un suo progetto in tale ambito chiamato \textit{SyncTrace}. Questo sistema ha come scopo lo sviluppo di due prodotti differenti ma in relazione tra loro: un'applicazione di \textit{contact tracing} puro e un applicativo di gestione e organizzazione per i medici e per gli esercenti di attività commerciali. \\
+
 Il \textbf{primo} applicativo, mostrato in \hyperref[img:synctraceandroid]{Figura 2.2}, è pensato per l'utilizzo da parte di tutta la popolazione e ha come unico scopo il tracciamento dei contatti delle persone infette; esso è in forma di applicazione per dispositivi mobili, quali \textit{smartphone} e \textit{tablet}, ed è pensato in modo da tracciare i contatti e i livelli di rischio di positività basandosi su parametri oggettivi come la vicinanza e il tempo di esposizione. \\
 
 \begin{minipage}{\linewidth}
@@ -57,6 +57,7 @@ Il \textbf{primo} applicativo, mostrato in \hyperref[img:synctraceandroid]{Figur
 Il \textbf{secondo} applicativo, consistente in una \textit{web application} rappresentata in \hyperref[img:webapp]{Figura 2.3}, è pensato per fornire un'interfaccia di gestione del sistema ai medici e come applicazione di controllo per gli esercenti. Esso ha quindi un doppio utilizzo:
 \begin{itemize}
   \item I \textbf{medici}, una volta identificati come tali, possono usarlo per registrare nuovi contatti infetti, eliminare i dati di eventuali pazienti non infetti e verificarne la presenza e/o il livello di rischio di contagio nel sistema condiviso;
+
   \item Gli \textbf{esercenti}, una volta registrati come tali, possono controllare l'eventuale positività o il livello di rischio di contagio dei clienti che accedono alle proprie attività. \\
 \end{itemize}
 
@@ -137,7 +138,7 @@ Sebbene il mio lavoro non comprendesse l'utilizzo diretto di un \textit{database
 Per effettuare il \textit{deployment} della componente \textit{back-end} dell'applicativo, necessaria al processo di collaudo su dispositivo mobile, ho fatto uso dello strumento di containerizzazione \textit{Docker}\footcite{tec:docker}. Questo mi ha permesso di rendere la suddetta componente installabile facilmente su qualsiasi sistema.
 
 \subsubsection*{Android Studio}
-Per effettuare il collaudo di quanto sviluppato su dispositivo mobile, sono stato vincolato all'ambiente di sviluppo integrato \textit{Android Studio}, fornito gratuitamente dall'azienda \textit{JetBrains}, per la compilazione dell'applicazione per dispositivi \textit{Android}; in accoppiata a questo ho utilizzato il \textit{tool ADB} (\textit{Android Debug Bridge}) per l'installazione dell'applicazione sul dispotivo.
+Per effettuare il collaudo di quanto sviluppato su dispositivo mobile, sono stato vincolato all'ambiente di sviluppo integrato \textit{Android Studio}, fornito gratuitamente dall'azienda \textit{JetBrains}, per la compilazione dell'applicazione per dispositivi \textit{Android}; in accoppiata a questo ho utilizzato il \textit{tool ADB} (\textit{Android Debug Bridge}) per l'installazione dell'applicazione sul dispositivo.
 
 \subsubsection*{Documentazione}
 Per quanto riguarda la documentazione, su consiglio del mio tutor aziendale la mia scelta è ricaduta sul \textit{tool Compodoc}\footcite{tec:compodoc}, uno strumento simile a \textit{Javadoc} per applicazioni sviluppate tramite il \textit{framework Angular}; questo strumento ha permesso la generazione automatica di documentazione a partire da commenti strutturati al codice.
@@ -173,7 +174,7 @@ Di seguito riporto, in \hyperref[tab:obiettivi-originali]{Tabella 2.2}, gli obie
 \texttt{O-O3} & Portare a termine le implementazioni previste con una percentuale di superamento pari all'80\%                                                \\ \hline
 \texttt{O-D1} & Portare a termine le implementazioni previste con una percentuale di superamento pari al 100\%                                                \\ \hline
 \texttt{O-F1} & Dare un contributo importante nelle fasi di progettazione delle maschere con l'obiettivo di realizzare una app usabile, \textit{responsive} e \textit{adaptive} \\ \hline
-\texttt{O-F2} & Implementare la lettura del \textit{QR Code} dirattamente dalla fotocamera dello \textit{smartphone}, evitando quindi inserimenti manuali                       \\ \hline
+\texttt{O-F2} & Implementare la lettura del \textit{QR Code} direttamente dalla fotocamera dello \textit{smartphone}, evitando quindi inserimenti manuali                       \\ \hline
 \end{tabularx}
 \caption{Obiettivi di progetto originali.}
 \end{table}
@@ -187,7 +188,7 @@ In corso di progetto il piano di lavoro è stato rimodulato, in quanto ho svolto
 \textbf{Obiettivo}           & \textbf{Descrizione}                                                                                                                          \\ \hline
 \texttt{O-D2} & Containerizzazione della componente \textit{back-end} del progetto \textit{SyncTrace}                                              \\ \hline
 \end{tabularx}
-\caption{Ulteriorie obiettivo, aggiunto in corso di progetto.}
+\caption{Ulteriore obiettivo, aggiunto in corso di progetto.}
 \end{table}
 
 Il piano di lavoro identifica inoltre i prodotti attesi, cioè:
@@ -203,13 +204,6 @@ Il piano di lavoro identifica inoltre i prodotti attesi, cioè:
 Sono venuto a conoscenza di Sync Lab durante l'evento \textbf{StageIT 2020}. Questo evento, organizzato dal prof. Tullio Vardanega dell'\textit{Università degli Studi di Padova} in collaborazione con l'associazione di imprenditori \textit{Assindustria Venetocentro}, è un'occasione in cui gli studenti di diverse facoltà dell'università di Padova vengono messi in contatto con le aziende presenti sul territorio. \\
 L'evento viene organizzato annualmente; quest'anno, però, a causa dell'emergenza sanitaria non si è potuto svolgere in presenza. Nonostante questo, l'adesione da parte delle aziende e degli studenti è stato comunque soddisfacente, anche grazie al fatto che, seguendo gli incontri con le aziende per via telematica, è stato possibile contattarne più di una contemporaneamente. \\
 
-% \begin{minipage}{\linewidth}
-%   \centering
-%     \includegraphics[height=1.1cm]{immagini/stageit}
-%   \captionof{figure}{Logo di \textit{StageIT 2020}.}
-%   \caption*{\textbf{Fonte:} assindustriavenetocentro.it}
-% \end{minipage} \\
-
 Durante l'evento \textit{StageIT} ho avuto occasione di parlare con i rappresentanti di quattro aziende operanti nel comune di Padova, tra cui l'ing. Fabio Pallaro di Sync Lab. \\
 Gli ambiti di \textit{stage} a cui ero interessato erano principalmente tre: sviluppo software \textit{mobile}, \textit{data science} e \textit{cybersecurity}. Uno dei motivi per cui ho optato per Sync Lab come azienda è stato che l'ing. Pallaro mi ha offerto due diversi ambiti di \textit{stage}: uno riguardante lo sviluppo di un'applicazione per dispositivi mobili tramite \textit{framework Ionic}, e uno riguardante l'aspetto di sicurezza dei prodotti che l'azienda stava e avrebbe sviluppato con altri tirocinanti, entrambi ambiti a cui ero particolarmente interessato. L'azienda, inoltre, mi è sembrata molto attenta agli studenti interessati a un tirocinio presso di essa, segno a mia opinione di serietà, professionalità e apertura a nuove esperienze. \\
 Per quanto riguarda il progetto, ho infine optato per lo sviluppo di un applicativo mobile per svariati motivi, anzitutto l'ambito: la tematica del \textit{contact tracing} mi è infatti fin da subito interessata per l'utilità che può avere in situazioni come quella attuale. Oltre a questo, ho trovato che le tecnologie che sarei poi andato ad utilizzare fossero interessanti da un punto di vista personale e, soprattutto, professionale: i linguaggi \textit{JavaScript} e \textit{TypeScript} e i \textit{framework} web e \textit{mobile} come \textit{Angular} e \textit{Ionic}, infatti, sono utilizzati sempre di più frequentemente dalle aziende operanti nel settore \textit{IT}.
@@ -220,17 +214,11 @@ Per quanto riguarda il progetto, ho infine optato per lo sviluppo di un applicat
 
 Ho dedicato il primo mese del mio tirocinio allo studio e all'approfondimento di tutte le conoscenze che mi sarebbero servite, o mi sarebbero state utili, a sviluppare il progetto di \textit{stage} vero e proprio. Gli \textbf{strumenti} che ho utilizzato a tale scopo sono molteplici: anzitutto, ho fatto uso della piattaforma \textit{Udemy} per acquisire le informazioni teoriche riguardanti le tecnologie oggetto di studio; a questo ho associato anche l'utilizzo della piattaforma \textit{YouTube}, sulla quale ho trovato svariati video di particolare utilità. Per quanto riguarda gli esercizi pratici, invece, ho fatto uso sia della piattaforma \textit{Udemy} che di \textit{tool} per l'esercitazione, quali ad esempio il pacchetto \textit{npm "LearnYouNode"}\footcite{tec:learnyounode} per quanto riguarda lo studio del \textit{runtime NodeJS}. \\
 
-% \begin{minipage}{\linewidth}
-%   \centering
-%     \includegraphics[height=4.5cm]{immagini/udemy}
-%   \captionof{figure}{\textit{Homepage} della piattaforma \textit{Udemy}.}
-%   \caption*{\textbf{Fonte:} udemy.com}
-% \end{minipage}
-
 \subsection{Tecnologie}
 Ho cominciato lo studio delle tecnologie con il linguaggio di programmazione \textbf{Java}, del quale ho appreso principalmente la sintassi, i costrutti di base e, soprattutto, l'implementazione di \textit{servlet} e le \textit{JPA} (\textit{Java Persistence API}) del linguaggio \textit{Java Enterprise Edition}. Sebbene il mio progetto non prevedesse lo sviluppo in codice \textit{Java}, la componente \textit{back-end} del prodotto cui il mio progetto appartiene è scritto con questo linguaggio in accoppiata al \textit{framework Spring}; ho quindi ritenuto opportuno, insieme al tutor aziendale, approfondire questo argomento per poter comprendere almeno a grandi linee il funzionamento del \textit{back-end}. Successivamente ho quindi studiato il \textit{framework} \textbf{Spring}: di questo ho appreso a grandi linee il funzionamento generale, comprendente i diversi strati da cui è composto un applicativo sviluppato con questa tecnologia (\textit{database}, persistenza, \textit{business} e presentazione). \\
 Una volta terminato lo studio delle tecnologie riguardanti la componente \textit{back-end} del prodotto, sono passato allo studio di quelle riguardanti la componente \textit{front-end}. Ho quindi cominciato con lo studio di \textbf{JavaScript}, linguaggio del quale avevo già delle conoscenze abbastanza radicate; di questo ho quindi approfondito aspetti avanzati, quali \textit{promise}, \textit{fetch api} e le funzioni asincrone. Sebbene anche questo linguaggio non fosse previsto dal mio progetto, è stato comunque utile da studiare come base per lo studio di \textbf{TypeScript}, che è stato quello principalmente utilizzato per lo sviluppo dell'applicativo del mio progetto. \\
 Una volta concluso lo studio di questi linguaggi di programmazione ho approfondito i \textit{framework} che li utilizzano nel contesto del mio progetto di \textit{stage}. Per primo ho studiato \textbf{Angular}, che è la tecnologia utilizzata per lo sviluppo dell'applicativo di cui il mio progetto prevedeva il \textit{porting}; è stato quindi necessario studiarlo per capire al meglio come fosse strutturato tale applicativo. Ho infine approfondito il \textit{framework} \textbf{Ionic} che è stato quello che più ho utilizzato per lo sviluppo. \\
+
 Per completare le mie conoscenze in ambito \textit{back-end JavaScript}, inoltre, ho studiato il \textit{runtime} \textbf{NodeJS}. Nessun componente del prodotto a cui il mio progetto appartiene è sviluppato interamente con \textit{NodeJS}; alcune componenti di esso vengono utilizzate, però, per la gestione del collegamento tra la componente \textit{front-end} e quella \textit{back-end} dell'applicativo di cui ho eseguito il \textit{porting}. \\
 Ho infine approfondito \textbf{Docker}, piattaforma che automatizza il \textit{deployment} di applicazioni all'interno di macchine virtuali \textit{linux} minimali. Ho approfondito questo argomento a sviluppo già cominciato, poiché per il processo di collaudo si è reso necessario per me avere la componente \textit{back-end} del prodotto su un \textit{server} accessibile via \textit{http}, e mi è stato proposto di containerizzare tale componente per poter effettuare un \textit{deployment} più efficiente. In \hyperref[img:tecnologie]{Figura 2.5} ho riportato uno schema che mostra come le diverse tecnologie interagiscono tra loro nel caso del progetto oggetto del mio \textit{stage}. \\
 
