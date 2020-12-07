@@ -39,11 +39,12 @@ Alcuni dei prodotti che l'azienda offre al momento sono i seguenti:
 
   \item \textbf{StreamLog}: sistema finalizzato al soddisfacimento dei requisiti fissati dal \textit{Garante per la Protezione dei dati personali}, utilizzato dagli amministratori di sistema per controllare gli accessi agli utenti al fine di soddisfare i requisiti di \textit{privacy} richiesti dal garante;
 
-  \item \textbf{SynClinic}: sistema informativo per la gestione integrata dei processi, clinici e amministrativi, di ospedali, cliniche e case di cura. Questo applicativo fornisce svariate funzionalità organizzate in moduli, elencati nell'immagine seguente, che intersecano i bisogni del personale amministrativo e quelli del personale clinico delle strutture sanitarie, permettendo di gestire e monitorare tutte le fasi del percorso di cura del paziente. È utilizzabile sia in \textit{cloud} che \textit{on premises};
+  \item \textbf{SynClinic}: sistema informativo per la gestione integrata dei processi, clinici e amministrativi, di ospedali, cliniche e case di cura. Questo applicativo fornisce svariate funzionalità organizzate in moduli, elencati in \hyperref[img:synclinic]{Figura 1.1}, che intersecano i bisogni del personale amministrativo e quelli del personale clinico delle strutture sanitarie, permettendo di gestire e monitorare tutte le fasi del percorso di cura del paziente. È utilizzabile sia in \textit{cloud} che \textit{on premises};
 
   \begin{minipage}{\linewidth}
     \centering
       \includegraphics[height=6cm]{immagini/synclinic}
+          \label{img:synclinic}
     \captionof{figure}{Moduli di SynClinic.}
     \caption*{\textbf{Fonte:} synclinic.it}
   \end{minipage}
@@ -99,13 +100,14 @@ Per il processo di sviluppo, l'azienda fa uso di una metodologia \textit{Agile} 
 Come ho potuto constatare di persona durante il periodo di tirocinio, il modello adottato dall'azienda prevede uno sviluppo che procede per \textit{sprint}, ossia un'unità di base di durata fissa compresa tra una e quattro settimane a seconda degli obiettivi posti. A ogni \textit{sprint} corrisponde una funzionalità; questa viene verificata insieme al cliente, per tastarne la soddisfazione o ricevere consigli che possano migliorare tale nuova funzionalità. \\
 
 \begin{minipage}{\linewidth}
+  \label{img:scrum}
   \centering
     \includegraphics[height=6cm]{immagini/scrumprocess}
   \captionof{figure}{Metodologia Scrum.}
   \caption*{\textbf{Fonte:} antevenio.com}
 \end{minipage} \\
 
-Lo sviluppo di un prodotto in Sync Lab passa attraverso cinque attività, inquadrabili tutte in quanto previsto dalla metodologia \textit{Scrum} riassunta dalla precedente immagine. \\
+Lo sviluppo di un prodotto in Sync Lab passa attraverso cinque attività, inquadrabili tutte in quanto previsto dalla metodologia \textit{Scrum} riassunta dalla \hyperref[img:scrum]{Figura 1.2}. \\
 La prima attività che viene svolta è la redazione di una lista di cose da fare per portare a termine il progetto; nel caso del mio progetto di \textit{stage}, ad esempio, ho definito insieme al tutor aziendale le \textit{feature} che avrei dovuto mettere a disposizione, e abbiamo visionato assieme i \textit{bug} presenti nel codice che avrei dovuto utilizzare come \textit{baseline}, al fine di sapere cosa avrei dovuto correggere di quanto già fatto. Nella metodologia \textit{Scrum}, questa lista assume il nome di \textbf{Product Backlog}. \\
 Dopo aver redatto questa lista, solitamente viene realizzata una pianificazione degli \textit{sprint} che è necessario effettuare per portare a termine il progetto. In ambito \textit{Scrum} questa pianificazione viene chiamata \textbf{Sprint Planning}, e nel caso del mio tirocinio è corrisposta alla divisione in incrementi che avrei dovuto effettuare per completare il piano di lavoro. Successivamente, vengono individuati dei sottoinsiemi di obiettivi per ogni \textit{sprint} definito durante l'attività chiamata \textbf{Sprint Backlog}. Un esempio pratico di questa attività è la definizione degli incrementi che ho effettuato prima di cominciare lo \textit{stage}. \\
 Una volta definiti tutti gli obiettivi e aver correttamente diviso le tempistiche in \textbf{Sprint}, questi vengono ad uno ad uno eseguiti; nell'ambito del mio stage, questo è corrisposto allo sviluppo di quanto previsto dal piano di progetto. All'esecuzione di ogni incremento, inoltre, di questo è stata verificata l'aderenza agli obiettivi posti, che nella metodologia \textit{Scrum} vegnono chiamati \textbf{Sprint Goal}.
@@ -120,15 +122,7 @@ Durante il mio \textit{stage} ho inoltre potuto sperimentare anche due degli eve
 
 \section{Tecnologie utilizzate}
 
-Come riportato sul sito aziendale, Sync Lab fa uso di diversi linguaggi di programmazione, \textit{framework} e strumenti di supporto moderni e funzionali, al fine di soddisfare i clienti; oltre a questo, l'azienda è costantemente aggiornata sulle tecnologie di riferimento e pronta ad espandere le proprie conoscenze con le tecnologie più moderne. \newpage
-
-\begin{minipage}{\linewidth}
-  \centering
-    \includegraphics[height=4cm]{immagini/linguaggi}
-  \captionof{figure}{Panoramica delle tecnologie utilizzate da Sync Lab.}
-  \caption*{\textbf{Fonte:} synclab.it}
-\end{minipage} \\
-
+Come riportato sul sito aziendale, Sync Lab fa uso di diversi linguaggi di programmazione, \textit{framework} e strumenti di supporto moderni e funzionali, al fine di soddisfare i clienti; oltre a questo, l'azienda è costantemente aggiornata sulle tecnologie di riferimento e pronta ad espandere le proprie conoscenze con le tecnologie più moderne.
 Tra i linguaggi di programmazione più utilizzati troviamo i seguenti:
 \begin{itemize}
   \item \textbf{Java}\footcite{tec:java}: linguaggio di programmazione ad alto livello orientato agli oggetti, largamente utilizzato dalle aziende; in particolare, \textit{Java} viene utilizzato da Sync Lab, in accoppiata al \textit{framework Spring}\footcite{tec:spring}, per lo sviluppo dei servizi \textit{REST} necessari alle componenti \textit{back-end} di svariati applicativi, tra cui ad esempio \textit{SynClinic} e \textit{StreamCrusher}. Questo linguaggio, abbinato al \textit{framework Spring}, è stato utilizzato anche per lo sviluppo della componente \textit{back-end} dell'applicativo \textit{SyncTrace}, oggetto del mio tirocinio;
@@ -146,9 +140,10 @@ Tra i linguaggi di programmazione più utilizzati troviamo i seguenti:
 
 L'azienda utilizza anche svariati \textit{framework} a supporto della programmazione; alcuni tra i \textit{framework} più utilizzati dall'azienda sono:
 \begin{itemize}
-  \item \textbf{Spring}: \textit{framework open-source} per lo sviluppo di applicazioni con linguaggio di programmazione \textit{Java}; viene utilizzato, possibilmente combinando il \textit{core} del \textit{framework} con altri progetti quali \textit{Spring Boot} e \textit{Spring Data}, per sviluppare applicativi lato \textit{server}. Esempio di utilizzo di questo \textit{framework} da parte di Sync Lab sono svariate applicazioni web la cui componente \textit{back-end} è sviluppata con l'ausilio di queste tecnologie, come ad esempio \textit{SynClinic} e \textit{StreamCrusher}. Di seguito viene riportata l'architettura generale di tale \textit{framework};
+  \item \textbf{Spring}: \textit{framework open-source} per lo sviluppo di applicazioni con linguaggio di programmazione \textit{Java}; viene utilizzato, possibilmente combinando il \textit{core} del \textit{framework} con altri progetti quali \textit{Spring Boot} e \textit{Spring Data}, per sviluppare applicativi lato \textit{server}. Esempio di utilizzo di questo \textit{framework} da parte di Sync Lab sono svariate applicazioni web la cui componente \textit{back-end} è sviluppata con l'ausilio di queste tecnologie, come ad esempio \textit{SynClinic} e \textit{StreamCrusher}. La \hyperref[img:spring]{Figura 1.3} rappresenta l'architettura generale di tale \textit{framework};
 
   \begin{minipage}{\linewidth}
+    \label{img:spring}
     \centering
       \includegraphics[height=5cm]{immagini/spring}
     \captionof{figure}{Architettura dello \textit{Spring framework}.}
@@ -156,18 +151,20 @@ L'azienda utilizza anche svariati \textit{framework} a supporto della programmaz
   \end{minipage}
 
   \item \textbf{Angular}: \textit{framework open-source} per lo sviluppo di applicazioni web tramite linguaggio di programmazione \textit{TypeScript}. L'utilizzo principale di questa tecnologia risiede nello sviluppo di \textit{single page application} reattive e costruite su un \textit{back-end} composto da servizi \textit{REST}. Esempi di utilizzo di questo \textit{framework} sono \textit{SynClinic} e \textit{DPS4.0}, già citati in precedenza. \\
-  Oltre alla possibilità di sviluppare applicativi veloci e funzionali, questo \textit{framework} offre anche un \textit{design pattern} di tipo \textit{Model-View-ViewModel} nativo come riassunto dalla seguente immagine, fattore che facilita la progettazione e lo sviluppo delle applicazioni;
+  Oltre alla possibilità di sviluppare applicativi veloci e funzionali, questo \textit{framework} offre anche un \textit{design pattern} di tipo \textit{Model-View-ViewModel} nativo rappresentato dalla \hyperref[img:angular]{Figura 1.4}, fattore che facilita la progettazione e lo sviluppo delle applicazioni;
 
   \begin{minipage}{\linewidth}
+    \label{img:angular}
     \centering
       \includegraphics[height=5cm]{immagini/angular}
     \captionof{figure}{Pattern MVVM, adottato anche dal \textit{framework Angular}.}
     \caption*{\textbf{Fonte:} alphalogicinc.com}
   \end{minipage}
 
-  \item \textbf{Electron}\footcite{tec:electron}: \textit{framework open-source} che consente lo sviluppo dell'interfaccia grafica di applicazioni desktop utilizzando tecnologie tipicamente pensate per il web, quali \textit{HTML}, \textit{CSS}, \textit{JavaScript} e \textit{TypeScript}; per fare ciò, questa tecnologia combina il motore di rendering \textit{Chromium} e il \textit{runtime} \textit{NodeJS}\footcite{tec:nodejs}. \\
+  \item \textbf{Electron}\footcite{tec:electron}: \textit{framework open-source} che consente lo sviluppo dell'interfaccia grafica di applicazioni desktop utilizzando tecnologie tipicamente pensate per il web, quali \textit{HTML}, \textit{CSS}, \textit{JavaScript} e \textit{TypeScript}; per fare ciò, questa tecnologia combina il motore di rendering \textit{Chromium} e il \textit{runtime} \textit{NodeJS}\footcite{tec:nodejs}. La \hyperref[img:electron]{Figura 1.5} riassume la struttura di questa tecnologia.
 
   \begin{minipage}{\linewidth}
+    \label{img:electron}
     \centering
       \includegraphics[height=2cm]{immagini/electron}
     \captionof{figure}{Funzionamento del \textit{framework Electron} con \textit{NodeJS}.}
@@ -193,12 +190,12 @@ Sync Lab utilizza strumenti tecnologici anche per gestire il lavoro da remoto; i
 
 Sync Lab presta grande attenzione anche all'innovazione e allo sviluppo, sia in senso tecnologico che industriale. L'azienda, infatti, conta tre dipartimenti ideati per sperimentare e innovare, i quali sono \textbf{Research and Development}, nato con lo scopo di promuovere nuovi prodotti nati da ricerche in svariati settori, \textbf{Lab}, in cui l'azienda sviluppa soluzioni a quanto studiato nel precedente dipartimento, e \textbf{Start-up}, il cui scopo è quello di promuovere le \textit{start-up} di maggiore rilevanza per quanto riguarda l'innovazione; per fare ciò, Sync Lab collabora con svariati enti privati e università, sia italiane che estere. \\
 
-\begin{minipage}{\linewidth}
-  \centering
-    \includegraphics[height=2cm]{immagini/universita}
-  \captionof{figure}{Alcune università con le quali l'azienda collabora.}
-  \caption*{\textbf{Fonte:} synclab.it}
-\end{minipage} \\
+% \begin{minipage}{\linewidth}
+%   \centering
+%     \includegraphics[height=2cm]{immagini/universita}
+%   \captionof{figure}{Alcune università con le quali l'azienda collabora.}
+%   \caption*{\textbf{Fonte:} synclab.it}
+% \end{minipage} \\
 
 Alcuni dei progetti di ricerca fondati e mantenuti da Sync Lab sono i seguenti:
 \begin{itemize}
@@ -207,9 +204,10 @@ Alcuni dei progetti di ricerca fondati e mantenuti da Sync Lab sono i seguenti:
   \item \textbf{BDA4PHR}: piattaforma \textit{open-source}, scalabile, estendibile e manutenibile che offre servizi di \textit{storing} e \textit{Big Data Analytics} dedicati ad informazioni di tipo medico-sanitario. Lo scopo di questo progetto è la creazione di un \textit{repository} sicuro, distribuito e affidabile per la gestione, la condivisone e l'analisi di dati eterogenei. Tra i finanziatori di questo progetto ci sono l'\textit{Unione Europea} e il \textit{Ministero dello Sviluppo Economico} italiano. \\
 \end{itemize}
 
-I progetti a cui l'azienda prende parte sono molteplici e in continuo aumento; alcuni dei progetti ora attivi sono riassunti dal sito aziendale, del quale l'immagine che segue è una cattura di schermo.
+I progetti a cui l'azienda prende parte sono molteplici e in continuo aumento; alcuni dei progetti ora attivi sono riassunti dal sito aziendale, del quale la \hyperref[img:progetti]{Figura 1.6} è una cattura di schermo. \\
 
 \begin{minipage}{\linewidth}
+  \label{img:progetti}
   \centering
     \includegraphics[height=5.5cm]{immagini/progetti}
   \captionof{figure}{I progetti di ricerca e sviluppo a cui Sync Lab collabora.}

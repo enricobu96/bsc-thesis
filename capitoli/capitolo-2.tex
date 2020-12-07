@@ -34,9 +34,10 @@ Oltre a questo, il periodo è di vitale importanza anche per descrivere lo \text
 
 \section{Lo scopo dello stage}
 
-In risposta alla situazione sanitaria, molte aziende del settore \textit{ICT} si sono attivate per sviluppare applicazioni e sistemi di \textit{contact tracing}. Il \textit{contact tracing} consiste nell'identificazione delle persone che potrebbero essere venute a contatto con una persona infetta, e nella successiva raccolta di ulteriori informazioni, quali vicinanza e tempo di esposizione, su tali contatti; il fine di questa pratica è aiutare il sistema sanitario a individuare i possibili contagi, arrivando a costruire un albero dei contatti per poter agire tempestivamente sula diffusione. \\
+In risposta alla situazione sanitaria, molte aziende del settore \textit{ICT} si sono attivate per sviluppare applicazioni e sistemi di \textit{contact tracing}. Il \textit{contact tracing}, rappresentato schematicamente in \hyperref[img:contacttracing]{Figura 2.1}, consiste nell'identificazione delle persone che potrebbero essere venute a contatto con una persona infetta, e nella successiva raccolta di ulteriori informazioni, quali vicinanza e tempo di esposizione, su tali contatti; il fine di questa pratica è aiutare il sistema sanitario a individuare i possibili contagi, arrivando a costruire un albero dei contatti per poter agire tempestivamente sula diffusione. \\
 
 \begin{minipage}{\linewidth}
+  \label{img:contacttracing}
   \centering
     \includegraphics[height=5.3cm]{immagini/contacttracing}
   \captionof{figure}{Rappresentazione schematica del \textit{contact tracing}.}
@@ -44,21 +45,23 @@ In risposta alla situazione sanitaria, molte aziende del settore \textit{ICT} si
 \end{minipage} \\
 
 Tra le aziende che si sono mobilitate per questa causa c'è anche Sync Lab, che ha avviato un suo progetto in tale ambito chiamato \textit{SyncTrace}. Questo sistema ha come scopo lo sviluppo di due prodotti differenti ma in relazione tra loro: un'applicazione di \textit{contact tracing} puro e un applicativo di gestione e organizzazione per i medici e per gli esercenti di attività commerciali. \\
-Il \textbf{primo} applicativo, pensato per l'utilizzo da parte di tutta la popolazione, ha come unico scopo il tracciamento dei contatti delle persone infette; esso è in forma di applicazione per dispositivi mobili, quali \textit{smartphone} e \textit{tablet}, ed è pensato in modo da tracciare i contatti e i livelli di rischio di positività basandosi su parametri oggettivi come la vicinanza e il tempo di esposizione. \\
+Il \textbf{primo} applicativo, mostrato in \hyperref[img:synctraceandroid]{Figura 2.2}, è pensato per l'utilizzo da parte di tutta la popolazione e ha come unico scopo il tracciamento dei contatti delle persone infette; esso è in forma di applicazione per dispositivi mobili, quali \textit{smartphone} e \textit{tablet}, ed è pensato in modo da tracciare i contatti e i livelli di rischio di positività basandosi su parametri oggettivi come la vicinanza e il tempo di esposizione. \\
 
 \begin{minipage}{\linewidth}
+  \label{img:synctraceandroid}
   \centering
     \includegraphics[height=7.8cm]{immagini/synctraceandroid}
   \captionof{figure}{Immagine di cattura di schermo iniziale dell'applicazione \textit{SyncTrace}.}
 \end{minipage} \\
 
-Il \textbf{secondo} applicativo, consistente in una \textit{web application}, è pensato per fornire un'interfaccia di gestione del sistema ai medici e come applicazione di controllo per gli esercenti. Esso ha quindi un doppio utilizzo:
+Il \textbf{secondo} applicativo, consistente in una \textit{web application} rappresentata in \hyperref[img:webapp]{Figura 2.3}, è pensato per fornire un'interfaccia di gestione del sistema ai medici e come applicazione di controllo per gli esercenti. Esso ha quindi un doppio utilizzo:
 \begin{itemize}
   \item I \textbf{medici}, una volta identificati come tali, possono usarlo per registrare nuovi contatti infetti, eliminare i dati di eventuali pazienti non infetti e verificarne la presenza e/o il livello di rischio di contagio nel sistema condiviso;
   \item Gli \textbf{esercenti}, una volta registrati come tali, possono controllare l'eventuale positività o il livello di rischio di contagio dei clienti che accedono alle proprie attività. \\
 \end{itemize}
 
 \begin{minipage}{\linewidth}
+  \label{img:webapp}
   \centering
     \includegraphics[height=7.2cm]{immagini/webapp}
   \captionof{figure}{Immagine di cattura di schermo iniziale della \textit{webapp} per, rispettivamente, medici ed esercenti.}
@@ -75,7 +78,7 @@ Prima di cominciare il tirocinio ho definito, insieme al tutor aziendale, gli ob
 \subsection{Vincoli temporali}
 
 Lo \textit{stage} aveva una durata prevista di 8 settimane, di cui 7 da 40 ore l'una e l'ultima da 20 ore, per un totale di 300 ore. Come già detto, la maggior parte del progetto si è svolto in \textit{smart working}: ho quindi lavorato una media di 8 ore giornaliere da casa. \\
-I giorni in cui mi sono recato in ufficio, generalmente il venerdì di ogni settimana, l'orario di lavoro è stato dalle 09.00 alle 18.00, con un'ora di pausa pranzo. Di seguito viene riportata una tabella riassuntiva delle attività svolte, divise per ore e settimane.
+I giorni in cui mi sono recato in ufficio, generalmente il venerdì di ogni settimana, l'orario di lavoro è stato dalle 09.00 alle 18.00, con un'ora di pausa pranzo. Di seguito, in \hyperref[tab:attivita-settimanali]{Tabella 2.1}, riporto un riassunto delle attività svolte, divise per ore e settimane.
 
 \begin{table}[h]
   \label{tab:attivita-settimanali}
@@ -108,9 +111,10 @@ I giorni in cui mi sono recato in ufficio, generalmente il venerdì di ogni sett
 \subsection{Vincoli organizzativi}
 
 Prima di cominciare lo \textit{stage} ho inoltre pattuito i vincoli organizzativi con il tutor aziendale. Come già detto, per quanto riguarda questo frangente è stato deciso di lavorare in \textit{smart working} per la maggior parte della durata del progetto; abbiamo inoltre deciso di incontrarci periodicamente, solitamente il venerdì, per fare il punto della situazione e potermi allineare con il tutor aziendale. \\
-Ho rendicontato il lavoro che ho effettuato, sia in remoto che in presenza, in un foglio di calcolo online riportante la data, le attività svolte in tale data e l'approvazione o meno da parte del tutor aziendale; ho aggiornato questo documento quotidianamente, e settimanalmente ho ricevuto il \textit{feedback} da parte del tutor. Quella che segue è una porzione di tale documento. \newpage
+Ho rendicontato il lavoro che ho effettuato, sia in remoto che in presenza, in un foglio di calcolo online riportante la data, le attività svolte in tale data e l'approvazione o meno da parte del tutor aziendale; ho aggiornato questo documento quotidianamente, e settimanalmente ho ricevuto il \textit{feedback} da parte del tutor. In \hyperref[img:drive]{Figura 2.4} riporto una porzione di tale documento. \newpage
 
 \begin{minipage}{\linewidth}
+  \label{img:drive}
   \centering
     \includegraphics[height=7.5cm]{immagini/drive}
   \captionof{figure}{Porzione del registro delle attività.}
@@ -130,7 +134,7 @@ Essendo il prodotto a cui ho lavorato non coperto da segreto industriale, ho svo
 Sebbene il mio lavoro non comprendesse l'utilizzo diretto di un \textit{database}, la componente \textit{back-end} dell'applicativo fa uso del \textit{database} relazionale \textit{PostgreSQL}\footcite{tec:postgres}; ho avuto modo di utilizzare questa tecnologia durante il processo di collaudo, per verificare che i dati inseriti dall'applicazione venissero correttamente immagazzinati dal \textit{database}.
 
 \subsubsection*{Docker}
-Per effettuare il \textit{deploy} della componente \textit{back-end} dell'applicativo, necessaria al processo di collaudo su dispositivo mobile, ho fatto uso dello strumento di containerizzazione \textit{Docker}\footcite{tec:docker}. Questo mi ha permesso di rendere la suddetta componente installabile facilmente su qualsiasi sistema.
+Per effettuare il \textit{deployment} della componente \textit{back-end} dell'applicativo, necessaria al processo di collaudo su dispositivo mobile, ho fatto uso dello strumento di containerizzazione \textit{Docker}\footcite{tec:docker}. Questo mi ha permesso di rendere la suddetta componente installabile facilmente su qualsiasi sistema.
 
 \subsubsection*{Android Studio}
 Per effettuare il collaudo di quanto sviluppato su dispositivo mobile, sono stato vincolato all'ambiente di sviluppo integrato \textit{Android Studio}, fornito gratuitamente dall'azienda \textit{JetBrains}, per la compilazione dell'applicazione per dispositivi \textit{Android}; in accoppiata a questo ho utilizzato il \textit{tool ADB} (\textit{Android Debug Bridge}) per l'installazione dell'applicazione sul dispotivo.
@@ -156,10 +160,11 @@ Ogni obiettivo possiede un nome formato nel seguente modo:
   \item \texttt{[numero]} consiste in un numero, progressivo per ogni tipologia.
 \end{itemize}
 
-Gli obiettivi inizialmente individuati sono riportati nella seguente tabella.
+Di seguito riporto, in \hyperref[tab:obiettivi-originali]{Tabella 2.2}, gli obiettivi inizialmente individuati.
 \newpage
 
 \begin{table}[h]
+  \label{tab:obiettivi-originali}
 \begin{tabularx}{\textwidth}{|l|X|}
 \hline
 \textbf{Obiettivo}           & \textbf{Descrizione}                                                                                                                          \\ \hline
@@ -173,9 +178,10 @@ Gli obiettivi inizialmente individuati sono riportati nella seguente tabella.
 \caption{Obiettivi di progetto originali.}
 \end{table}
 
-In corso di progetto il piano di lavoro è stato rimodulato, in quanto ho svolto parte del lavoro in un tempo minore del previsto; ai precedenti obiettivi si è quindi aggiunto il seguente:
+In corso di progetto il piano di lavoro è stato rimodulato, in quanto ho svolto parte del lavoro in un tempo minore del previsto; ai precedenti obiettivi si è quindi aggiunto l'obiettivo che riporto in \hyperref[tab:ulteriore-obiettivo]{Tabella 2.3}.
 
 \begin{table}[h]
+  \label{tab:ulteriore-obiettivo}
 \begin{tabularx}{\textwidth}{|l|X|}
 \hline
 \textbf{Obiettivo}           & \textbf{Descrizione}                                                                                                                          \\ \hline
@@ -226,9 +232,10 @@ Ho cominciato lo studio delle tecnologie con il linguaggio di programmazione \te
 Una volta terminato lo studio delle tecnologie riguardanti la componente \textit{back-end} del prodotto, sono passato allo studio di quelle riguardanti la componente \textit{front-end}. Ho quindi cominciato con lo studio di \textbf{JavaScript}, linguaggio del quale avevo già delle conoscenze abbastanza radicate; di questo ho quindi approfondito aspetti avanzati, quali \textit{promise}, \textit{fetch api} e le funzioni asincrone. Sebbene anche questo linguaggio non fosse previsto dal mio progetto, è stato comunque utile da studiare come base per lo studio di \textbf{TypeScript}, che è stato quello principalmente utilizzato per lo sviluppo dell'applicativo del mio progetto. \\
 Una volta concluso lo studio di questi linguaggi di programmazione ho approfondito i \textit{framework} che li utilizzano nel contesto del mio progetto di \textit{stage}. Per primo ho studiato \textbf{Angular}, che è la tecnologia utilizzata per lo sviluppo dell'applicativo di cui il mio progetto prevedeva il \textit{porting}; è stato quindi necessario studiarlo per capire al meglio come fosse strutturato tale applicativo. Ho infine approfondito il \textit{framework} \textbf{Ionic} che è stato quello che più ho utilizzato per lo sviluppo. \\
 Per completare le mie conoscenze in ambito \textit{back-end JavaScript}, inoltre, ho studiato il \textit{runtime} \textbf{NodeJS}. Nessun componente del prodotto a cui il mio progetto appartiene è sviluppato interamente con \textit{NodeJS}; alcune componenti di esso vengono utilizzate, però, per la gestione del collegamento tra la componente \textit{front-end} e quella \textit{back-end} dell'applicativo di cui ho eseguito il \textit{porting}. \\
-Ho infine approfondito \textbf{Docker}, piattaforma che automatizza il \textit{deployment} di applicazioni all'interno di macchine virtuali \textit{linux} minimali. Ho approfondito questo argomento a sviluppo già cominciato, poiché per il processo di collaudo si è reso necessario per me avere la componente \textit{back-end} del prodotto su un \textit{server} accessibile via \textit{http}, e mi è stato proposto di containerizzare tale componente per poter effettuare un \textit{deployment} più efficiente. Di seguito ho riportato uno schema che mostra come le diverse tecnologie interagiscono tra loro nel caso del progetto oggetto del mio \textit{stage}. \\
+Ho infine approfondito \textbf{Docker}, piattaforma che automatizza il \textit{deployment} di applicazioni all'interno di macchine virtuali \textit{linux} minimali. Ho approfondito questo argomento a sviluppo già cominciato, poiché per il processo di collaudo si è reso necessario per me avere la componente \textit{back-end} del prodotto su un \textit{server} accessibile via \textit{http}, e mi è stato proposto di containerizzare tale componente per poter effettuare un \textit{deployment} più efficiente. In \hyperref[img:tecnologie]{Figura 2.5} ho riportato uno schema che mostra come le diverse tecnologie interagiscono tra loro nel caso del progetto oggetto del mio \textit{stage}. \\
 
 \begin{minipage}{\linewidth}
+  \label{img:tecnologie}
   \centering
     \includegraphics[height=5.2cm]{immagini/tecnologie}
   \captionof{figure}{Schema rappresentante le relazioni che sussistono tra le tecnologie descritte in SyncTrace.}

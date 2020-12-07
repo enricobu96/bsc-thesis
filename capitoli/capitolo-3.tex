@@ -29,9 +29,10 @@ Ho qui riportato solamente i casi d'uso principali riguardanti gli attori primar
 
 \subsection*{Attori primari}
 
-Gli attori primari corrispondono agli utenti che interagiscono con il sistema.
+Gli attori primari, riportati in \hyperref[img:attori]{Figura 3.1}, corrispondono agli utenti che interagiscono con il sistema.
 
 \begin{minipage}{\linewidth}
+  \label{img:attori}
   \centering
     \includegraphics[height=2cm]{immagini/uc/attori}
   \captionof{figure}{Attori principali.}
@@ -48,7 +49,10 @@ Nel sistema del prodotto che ho sviluppato, gli attori principali sono i seguent
 
 \subsubsection*{Utente non autenticato}
 
+La \hyperref[img:nonautenticato]{Figura 3.2} riporta i casi d'uso dell'utente non autenticato.
+
 \begin{minipage}{\linewidth}
+  \label{img:nonautenticato}
   \centering
     \includegraphics[height=7cm]{immagini/uc/nonautenticato}
   \captionof{figure}{Diagramma dei casi d'uso per un utente non autenticato.}
@@ -71,7 +75,10 @@ Nel sistema del prodotto che ho sviluppato, gli attori principali sono i seguent
 
 \subsubsection*{Medico}
 
+La \hyperref[img:medico]{Figura 3.3} riporta i casi d'uso dell'utente medico.
+
 \begin{minipage}{\linewidth}
+  \label{img:medico}
   \centering
     \includegraphics[height=5cm]{immagini/uc/medico}
   \captionof{figure}{Diagramma dei casi d'uso per un utente autenticato come medico.}
@@ -88,7 +95,10 @@ Nel sistema del prodotto che ho sviluppato, gli attori principali sono i seguent
 
 \subsubsection*{Esercente}
 
+La \hyperref[img:esercente]{Figura 3.4} riporta i casi d'uso dell'utente esercente.
+
 \begin{minipage}{\linewidth}
+  \label{img:esercente}
   \centering
     \includegraphics[height=2.5cm]{immagini/uc/esercente}
   \captionof{figure}{Diagramma dei casi d'uso per un utente autenticato come esercente.}
@@ -138,7 +148,7 @@ Una volta definiti i casi d'uso ho delineato i requisiti del progetto che sarei 
 
 Nell'ambito del precedente \textit{stage} sono stati definiti solo i requisiti funzionali obbligatori riguardanti l'utente non autenticato e l'utente autenticato come medico; a questi ho quindi aggiunto i requisiti funzionali obbligatori riguardanti l'utente autenticato come esercente. \\
 Ho inoltre aggiunto altri sei requisiti \textbf{funzionali}, di cui quattro desiderabili e due opzionali, riguardanti l'usabilità dell'applicativo su dispositivi mobili. Per quanto riguarda i requisiti di \textbf{vincolo} ho invece individuato tre requisiti, rifacendomi ai vincoli definiti dal mio \textit{stage}, due dei quali sono individuabili fin da inizio \textit{stage} e riguardano l'utilizzo di determinate tecnologie, e il terzo riguarda l'utilizzo di \textit{Docker} per la containerizzazione del \textit{back-end}, ed è stato quindi aggiunto in corso di sviluppo. Tra i requisiti \textbf{qualitativi}, infine, ho inserito l'utilizzo di analisi statica per la verifica del codice e l'utilizzo di test di unità per la verifica delle funzioni e dei metodi realizzati. \\
-Il totale dei requisiti che ho identificato è quindi riassunto dalla seguente tabella:
+Nella \hyperref[tab:totale-requisiti]{Tabella 3.1} riassumo il totale dei requisiti che ho identificato.
 
 \begin{table}[h]
   \label{tab:totale-requisiti}
@@ -164,18 +174,20 @@ Considerando che molti dei requisiti funzionali individuati implicano anche nume
 Anche per quanto riguarda le scelte progettuali, essendo il mio progetto la continuazione di un progetto già concluso non ho avuto molto spazio di manovra. Ho però potuto riprogettare l'intera interfaccia grafica dell'applicativo per meglio conformarsi all'utilizzo \textit{mobile} di questo. \\
 Prima di procedere alla progettazione vera e propria e alla codifica, ho sviluppato un \textit{mockup} dell'applicazione; poiché le funzionalità offerte dal sistema erano già state definite durante il precedente \textit{stage} su tale progetto, la mia attenzione in questo momento si è rivolta unicamente all'aspetto grafico dell'applicazione che avrei dovuto sviluppare. Per fare ciò ho quindi usato un programma di \textit{sketching}, chiamato \textit{WireframeSketcher}\footcite{tec:wireframesketcher}, per abbozzare l'idea di come avrebbe dovuto essere l'applicazione. Questo programma permette di disegnare \textit{mockup} di siti web e applicazioni \textit{mobile} e \textit{desktop}, mettendo a disposizione numerosi \textit{asset}, quali ad esempio bottoni, campi di testo e \textit{label}, che possono essere facilmente utilizzati per disegnare bozze di applicativi utili ad avere una base di partenza per il successivo sviluppo. \\
 Con \textit{WireframeSketcher} ho disegnato le bozze di quasi tutte le maschere che poi ho implementato: ho infatti realizzato 12 maschere, e ho sviluppato la bozza di 10 di queste; questa disuguaglianza trova ragione in una iniziale malinterpretazione dell'applicativo da cui sono partito per lo sviluppo, riguardante le maschere di modifica e visualizzazione degli utenti infetti nel sistema. \\
-Non ho riportato questi \textit{mockup} nella documentazione ufficiale fornita come parte del prodotto all'azienda, ma mi sono stati utili per procedere senza indugi nella successiva attività di codifica. Seguono alcuni \textit{sketch} d'esempio. \\
+Non ho riportato questi \textit{mockup} nella documentazione ufficiale fornita come parte del prodotto all'azienda, ma mi sono stati utili per procedere senza indugi nella successiva attività di codifica. Nella \hyperref[img:appsketch]{Figura 3.5} riporto alcuni \textit{sketch} d'esempio. \\
 
 \begin{minipage}{\linewidth}
+  \label{img:appsketch}
   \centering
     \includegraphics[height=6cm]{immagini/appsketch}
   \captionof{figure}{Esempio di \textit{sketch} dell'applicazione realizzato con \textit{WireframeSketcher}.}
 \end{minipage} \\
 
 Come tratterò più approfonditamente nella prossima sezione, sebbene il mio progetto consistesse nella migrazione di una \textit{webapp Angular} su dispositivi mobili è vero anche che il \textit{framework} principale che ho utilizzato è diverso: la \textit{webapp}, infatti, è stata sviluppata totalmente tramite il \textit{framework Angular}, mentre l'applicazione oggetto del mio \textit{stage} è sviluppata tramite il \textit{framework Ionic} che utilizza alcune funzionalità del \textit{framework Angular}, ma è in sostanza una tecnologia diversa. \\
-La differenza più evidente tra \textit{Angular} e \textit{Ionic} è che il primo è pensato per lo sviluppo di \textit{single page application}, mentre il secondo è stato creato appositamente per lo sviluppo di applicazioni multipiattaforma, principalmente \textit{mobile}. \textit{Ionic} fa uso del \textit{framework Angular}, del \textit{framework React}\footcite{tec:react} o del \textit{framework Vue}\footcite{tec:vue} per quanto riguarda l'impostazione del progetto, la suddivisione in componenti e la gestione delle \textit{route} tra questi; a questo però aggiunge un sovrastrato per lo sviluppo di una componente \textit{front-end} ottimizzata per dispositivi mobili, \textit{reactive} e \textit{responsive}, composto da numerosi componenti grafici di cui l'immagine successiva è un esempio. \\
+La differenza più evidente tra \textit{Angular} e \textit{Ionic} è che il primo è pensato per lo sviluppo di \textit{single page application}, mentre il secondo è stato creato appositamente per lo sviluppo di applicazioni multipiattaforma, principalmente \textit{mobile}. \textit{Ionic} fa uso del \textit{framework Angular}, del \textit{framework React}\footcite{tec:react} o del \textit{framework Vue}\footcite{tec:vue} per quanto riguarda l'impostazione del progetto, la suddivisione in componenti e la gestione delle \textit{route} tra questi; a questo però aggiunge un sovrastrato per lo sviluppo di una componente \textit{front-end} ottimizzata per dispositivi mobili, \textit{reactive} e \textit{responsive}, composto da numerosi componenti grafici di cui la \hyperref[img:ioniclib]{Figura 3.6} è un esempio. \\
 
 \begin{minipage}{\linewidth}
+  \label{img:ioniclib}
   \centering
     \includegraphics[height=7.5cm]{immagini/ioniclib}
   \captionof{figure}{Esempio di funzionalità proprie di \textit{Ionic}.}
@@ -190,7 +202,7 @@ Combinando le attività di analisi dei requisiti e di progettazione ho individua
 
 \section{Codifica}
 
-Una volta conclusa la progettazione sono passato subito all'attività di codifica. Come precedentemente ribadito, il \textit{framework} utilizzato durante il progetto di \textit{stage} precedente al mio e quello che ho invece utilizzato io sono diversi. Un'ulteriore differenza, rispetto a quanto riportato, è che anche gli strumenti a supporto dello sviluppo sono differenti: per la generazione automatica del codice ripetitivo da cui partire con lo sviluppo del codice originale (codice \textit{boilerplate}) con \textit{framework Angular}, infatti, viene utilizzato il \textit{tool AngularCLI}\footcite{tec:angularcli}, mentre con \textit{Ionic} viene utilizzato il \textit{tool IonicCLI}\footcite{tec:ioniccli}. Questo strumento permette la generazione automatica dei componenti, divisi in opportune cartelle come mostrato nell'immagine che segue, da cui partire per sviluppare l'applicativo di interesse. In particolare, durante il progetto ho fatto uso di tale strumento per generare i seguenti componenti:
+Una volta conclusa la progettazione sono passato subito all'attività di codifica. Come precedentemente ribadito, il \textit{framework} utilizzato durante il progetto di \textit{stage} precedente al mio e quello che ho invece utilizzato io sono diversi. Un'ulteriore differenza, rispetto a quanto riportato, è che anche gli strumenti a supporto dello sviluppo sono differenti: per la generazione automatica del codice ripetitivo da cui partire con lo sviluppo del codice originale (codice \textit{boilerplate}) con \textit{framework Angular}, infatti, viene utilizzato il \textit{tool AngularCLI}\footcite{tec:angularcli}, mentre con \textit{Ionic} viene utilizzato il \textit{tool IonicCLI}\footcite{tec:ioniccli}. Questo strumento permette la generazione automatica dei componenti, divisi in opportune cartelle come mostra la \hyperref[img:directory]{Figura 3.7}, da cui partire per sviluppare l'applicativo di interesse. In particolare, durante il progetto ho fatto uso di tale strumento per generare i seguenti componenti:
 \begin{itemize}
   \item \textbf{Component}: in \textit{Angular}, un \textit{component} è un componente consistente in vista e modello uniti; esso modella quindi sia l'interfaccia grafica che la manipolazione dei dati. In \textit{Ionic}, un \textit{component} è invece concepito come una \textbf{porzione} di applicazione che può essere usata o meno più volte all'interno delle \textit{page}. Un esempio di questo componente in \textit{Ionic} è, nel mio caso, il logo dell'applicazione, che essendo definito come \textit{component} può essere inserito in diverse \textit{page} usando solo la sua dicitura \textit{HTML};
   \item \textbf{Service}: i \textit{service} di \textit{Ionic} coincidono con quelli di \textit{Angular}; essi corrispondono alla \textit{business logic} del progetto, e racchiudono quindi le funzionalità che possono essere utilizzate dagli altri componenti. Nel caso del prodotto sviluppato da me e dagli studenti il cui \textit{stage} ha preceduto il mio, un \textit{service} è ad esempio la componente che si occupa di gestire l'autenticazione degli utenti all'interno del sistema, comunicando con i servizi offerti dal \textit{back-end};
@@ -200,65 +212,70 @@ Una volta conclusa la progettazione sono passato subito all'attività di codific
 \newpage
 
 \begin{minipage}{\linewidth}
+  \label{img:directory}
   \centering
     \includegraphics[height=5cm]{immagini/directory}
   \captionof{figure}{Porzioni di \textit{directory} contenente un progetto \textit{Ionic}.}
 \end{minipage} \\
 
-Per quanto riguarda lo sviluppo del codice dell'applicazione, ho anzitutto cominciato con le maschere di \textit{login} e \textit{signup}, per permettermi fin da subito di autenticarmi correttamente all'interno del sistema e poter quindi sviluppare le funzionalità previste da entrambi i ruoli. Per la codifica di queste ho fatto un riutilizzo quasi completo dei servizi precedentemente sviluppati, andando a modificare solamente le \textit{route} per permettermi di sviluppare anche la pagina di benvenuto, che viene presentata al primo avvio assoluto dell'applicazione e fintanto che l'utente non si autentica per la prima volta.\\
+Per quanto riguarda lo sviluppo del codice dell'applicazione, ho anzitutto cominciato con le maschere di \textit{login} e \textit{signup}, per permettermi fin da subito di autenticarmi correttamente all'interno del sistema e poter quindi sviluppare le funzionalità previste da entrambi i ruoli. Per la codifica di queste ho fatto un riutilizzo quasi completo dei servizi precedentemente sviluppati, andando a modificare solamente le \textit{route} per permettermi di sviluppare anche la pagina di benvenuto, che viene presentata al primo avvio assoluto dell'applicazione e fintanto che l'utente non si autentica per la prima volta. La \hyperref[img:welcomeloginsignup]{Figura 3.8} mostra queste tre maschere. \\
 
 \begin{minipage}{\linewidth}
+  \label{img:welcomeloginsignup}
   \centering
     \includegraphics[height=6cm]{immagini/app/welcomeloginsignup}
   \captionof{figure}{In ordine: pagina di benvenuto, \textit{login} e registrazione.}
 \end{minipage}\\
 
-Dopo aver realizzato queste prime tre maschere sono passato alla codifica delle maschere riguardanti l'utente con ruolo esercente. Come anticipato precedentemente, l'esercente utilizza l'applicazione per controllare se un cliente può o meno entrare nella sua attività commerciale; per fare ciò, l'esercente legge il codice identificativo del cliente tramite l'applicazione, che comunicherà se questo è o meno infetto o con quale rischio lo è. Per leggere il codice identificativo l'utente ha due possibilità: utilizzare la fotocamera del dispositivo per leggere un codice QR o inserire il codice manualmente. Ho quindi realizzato due maschere, una per modalità di inserimento del codice.\\
+Dopo aver realizzato queste prime tre maschere sono passato alla codifica delle maschere riguardanti l'utente con ruolo esercente. Come anticipato precedentemente, l'esercente utilizza l'applicazione per controllare se un cliente può o meno entrare nella sua attività commerciale; per fare ciò, l'esercente legge il codice identificativo del cliente tramite l'applicazione, che comunicherà se questo è o meno infetto o con quale rischio lo è. Per leggere il codice identificativo l'utente ha due possibilità: utilizzare la fotocamera del dispositivo per leggere un codice QR o inserire il codice manualmente. Ho quindi realizzato due maschere, una per modalità di inserimento del codice, come la \hyperref[img:es]{Figura 3.9} riporta.\\
 
 \begin{minipage}{\linewidth}
+  \label{img:es}
   \centering
     \includegraphics[height=6cm]{immagini/app/es}
   \captionof{figure}{In ordine: lettura del QR a fotocamera spenta, lettura del QR a fotocamera accesa e inserimento manuale.}
 \end{minipage}\\
 
-A cavallo tra lo sviluppo delle maschere riguardanti l'esercente e quelle riguardanti il medico, ho codificato la maschera delle impostazioni; da questa vista è possibile visualizzare e modificare le informazioni personali e la password. \\
+A cavallo tra lo sviluppo delle maschere riguardanti l'esercente e quelle riguardanti il medico, ho codificato la maschera delle impostazioni, raffigurata in \hyperref[img:settings]{Figura 3.10}; da questa vista è possibile visualizzare e modificare le informazioni personali e la password. \\
 
 \begin{minipage}{\linewidth}
+  \label{img:settings}
   \centering
     \includegraphics[height=6cm]{immagini/app/settings}
   \captionof{figure}{Maschera delle impostazioni dell'utente.}
 \end{minipage}\\
 
-Una volta realizzata questa maschera ho proceduto alla realizzazione delle maschere riguardanti il medico. Come descritto brevemente in precedenza, l'utente medico utilizza l'applicazione per visualizzare le informazioni riguardanti gli infetti e i contatti presenti il tutto il sistema, per gestire gli utenti infetti e visualizzare i contatti tra utenti. Ho quindi realizzato sei maschere per visualizzare i dati, visualizzare, modificare e aggiungere gli utenti infetti e visualizzare i contatti tra gli utenti. \\
+Una volta realizzata questa maschera ho proceduto alla realizzazione delle maschere riguardanti il medico. Come descritto brevemente in precedenza, l'utente medico utilizza l'applicazione per visualizzare le informazioni riguardanti gli infetti e i contatti presenti il tutto il sistema, per gestire gli utenti infetti e visualizzare i contatti tra utenti. Ho quindi realizzato sei maschere per visualizzare i dati, visualizzare, modificare e aggiungere gli utenti infetti e visualizzare i contatti tra gli utenti. Esempi di queste maschere sono quelle che la \hyperref[img:med]{Figura 3.11} rappresenta. \\
 
 \begin{minipage}{\linewidth}
+  \label{img:med}
   \centering
     \includegraphics[height=5.5cm]{immagini/app/med}
   \captionof{figure}{In ordine: statistiche del sistema, gestione degli infetti e gestione dei contatti.}
 \end{minipage}\\
 
-Durante lo sviluppo delle maschere ho apportato diverse modifiche ai \textit{service} precedentemente sviluppati, al fine di renderli maggiormente compatibili con i dispositivi mobili. In particolare, ho completamente riscritto il servizio di \textit{alert}, poiché quelli nativi del \textit{framework Angular} non sono completamente funzionanti su dispositivi mobili. Al suo posto ho realizzato un servizio che fa uso delle librerie \textit{Ionic Native} per mostrare messaggi di \textit{alert} nativi per dispositivi \textit{Android} e \textit{iOS}. Ho inoltre realizzato un servizio di \textit{toast}, che permette di visualizzare messaggi da parte dell'applicazione sottoforma di \textit{toast}. Entrambi i servizi di avviso sono quindi visualizzati come elementi nativi del sistema operativo mobile, come mostrato dalla seguente figura. \\
+Durante lo sviluppo delle maschere ho apportato diverse modifiche ai \textit{service} precedentemente sviluppati, al fine di renderli maggiormente compatibili con i dispositivi mobili. In particolare, ho completamente riscritto il servizio di \textit{alert}, poiché quelli nativi del \textit{framework Angular} non sono completamente funzionanti su dispositivi mobili. Al suo posto ho realizzato un servizio che fa uso delle librerie \textit{Ionic Native} per mostrare messaggi di \textit{alert} nativi per dispositivi \textit{Android} e \textit{iOS}. Ho inoltre realizzato un servizio di \textit{toast}, che permette di visualizzare messaggi da parte dell'applicazione sottoforma di \textit{toast}. Entrambi i servizi di avviso sono quindi visualizzati come elementi nativi del sistema operativo mobile, come la \hyperref[img:alert]{Figura 3.12} riporta. \\
 
 \begin{minipage}{\linewidth}
+  \label{img:alert}
   \centering
     \includegraphics[height=2.7cm]{immagini/app/alert}
   \captionof{figure}{Esempi di, rispettivamente, \textit{toast} e \textit{alert}.}
 \end{minipage} \\
 
-Riassumendo, durante l'attività di codifica ho sviluppato 12 maschere, arrivando così a coprire tutti i casi d'uso previsti dal mio \textit{stage} e da quello precedente. Ho inoltre realizzato 8 servizi, 2 dei quali completamente originali e 6 trasposti dall'applicativo \textit{web} di partenza. La seguente tabella illustra una stima indicativa, precisa nell'ordine delle centinaia, del numero di \textit{SLOC} (\textit{single lines of code}) per ogni linguaggio utilizzato del prodotto che ho sviluppato, indicando anche quante sono originali e quante provengono dal precedente progetto di \textit{stage}.
+Riassumendo, durante l'attività di codifica ho sviluppato 12 maschere, arrivando così a coprire tutti i casi d'uso previsti dal mio \textit{stage} e da quello precedente. Ho inoltre realizzato 8 servizi, 2 dei quali completamente originali e 6 trasposti dall'applicativo \textit{web} di partenza. In \hyperref[tab:sloc]{Tabella 3.2} ho riportato una stima indicativa, precisa nell'ordine delle centinaia, del numero di \textit{SLOC} (\textit{single lines of code}) per ogni linguaggio utilizzato del prodotto che ho sviluppato, indicando anche quante provengono dal progetto precedente al mio (riportate in tabella come \textbf{Iniziali}).
 
 \begin{table}[h]
+  \centering
   \label{tab:sloc}
-  \begin{center}
-  \begin{tabularx}{\textwidth}{llll}
-    & \textbf{Originali}        & \textbf{Progetto precedente} & \textit{Totale}                    \\ \cline{2-4}
-\multicolumn{1}{l|}{\textbf{TypeScript}} & \multicolumn{1}{l|}{2400} & \multicolumn{1}{l|}{1200}     & \multicolumn{1}{l|}{3600}          \\ \cline{2-4}
-\multicolumn{1}{l|}{\textbf{HTML}}       & \multicolumn{1}{l|}{700}  & \multicolumn{1}{l|}{0}       & \multicolumn{1}{l|}{700}           \\ \cline{2-4}
-\multicolumn{1}{l|}{\textbf{CSS}}        & \multicolumn{1}{l|}{600}  & \multicolumn{1}{l|}{0}       & \multicolumn{1}{l|}{600}           \\ \cline{2-4}
-\multicolumn{1}{l|}{\textbf{Commenti}}   & \multicolumn{1}{l|}{1200} & \multicolumn{1}{l|}{0}       & \multicolumn{1}{l|}{1200}          \\ \cline{2-4}
-\multicolumn{1}{l|}{\textit{Totale}}     & \multicolumn{1}{l|}{5200} & \multicolumn{1}{l|}{1200}     & \multicolumn{1}{l|}{\textbf{6100}} \\ \cline{2-4}
-\end{tabularx}
-  \end{center}
+  \begin{tabular}{lll}
+    & \textbf{Iniziali}        & \textbf{Finali}                  \\ \cline{2-3}
+\multicolumn{1}{l|}{\textbf{TypeScript}} & \multicolumn{1}{l|}{1200} & \multicolumn{1}{l|}{3600}        \\ \cline{2-3}
+\multicolumn{1}{l|}{\textbf{HTML}}       & \multicolumn{1}{l|}{0}  & \multicolumn{1}{l|}{700}           \\ \cline{2-3}
+\multicolumn{1}{l|}{\textbf{CSS}}        & \multicolumn{1}{l|}{0}  & \multicolumn{1}{l|}{600}           \\ \cline{2-3}
+\multicolumn{1}{l|}{\textbf{Commenti}}   & \multicolumn{1}{l|}{0} & \multicolumn{1}{l|}{1200}           \\ \cline{2-3}
+\multicolumn{1}{l|}{\textit{Totale}}     & \multicolumn{1}{l|}{1200} & \multicolumn{1}{l|}{\textbf{6100}} \\ \cline{2-3}
+\end{tabular}
 \caption{Numero indicativo di \textit{SLOC} del prodotto che ho sviluppato.}
 \end{table}
 
@@ -283,27 +300,30 @@ L'analisi statica è un'attività che prevede la valutazione di un sistema nella
 Ho inoltre fatto uso di un \textit{linter}, ossia di un programma di utilità che permette di verificare staticamente il codice in base a parametri predefiniti; nel mio caso ho utilizzato \textit{ESLint}\footcite{tec:eslint}, ossia il \textit{linter} di riferimento per codice \textit{JavaScript} e \textit{TypeScript}. L'utilizzo di questo strumento, correttamente configurato, mi ha permesso di rendere tutto il codice \textit{TypeScript} che ho prodotto aderente agli standard di qualità più stringenti. \textit{ESLint}, inoltre, non si occupa solo della formattazione del codice, ma è anche utile a individuare porzioni di codice duplicato o inutilizzato: ciò mi ha permesso di rilasciare sui \textit{server} di produzione un codice pulito e minimale. \\
 
 \begin{minipage}{\linewidth}
+  \label{img:nglint}
   \centering
     \includegraphics[height=2cm]{immagini/nglint}
   \captionof{figure}{Risultato dell'esecuzione del \textit{linter} sul codice da me prodotto.}
 \end{minipage} \\
 
-Ho utilizzato il \textit{linter} per tutti i \textit{file TypeScript} dell'applicazione contenenti logica, compresi i \textit{file} contenenti gli \textit{unit test}, per un totale di 53 \textit{file} esaminati; come dimostrato dalla precedente immagine, tutti i \textit{file} analizzati hanno superato i controlli di qualità di \textit{ESLint}.
+Ho utilizzato il \textit{linter} per tutti i \textit{file TypeScript} dell'applicazione contenenti logica, compresi i \textit{file} contenenti gli \textit{unit test}, per un totale di 53 \textit{file} esaminati; come mostro in \hyperref[img:nglint]{Figura 3.13}, tutti i \textit{file} analizzati hanno superato i controlli di qualità di \textit{ESLint}.
 
 \subsection{Test di unità}
 
 Parallelamente all'analisi statica ho sviluppato anche dei test di unità; questi sono test che permettono di verificare le singole unità (\textit{i.e.} funzioni, metodi e classi) al fine di determinare se tali unità si comportano nella maniera desiderata. \\
-Per realizzare i test di unità ho utilizzato gli strumenti nativi di \textit{Angular}. Questo \textit{framework}, e di conseguenza anche \textit{Ionic}, al momento della generazione di un componente genera anche il codice \textit{boilerplate} per l'implementazione di questi test, di cui la seguente immagine è un esempio; nello specifico, per ogni \textit{file} contenente codice \textit{TypeScript} viene generato parallelamente un altro \textit{file TypeScript} con lo stesso nome, a cui viene aggiunto il termine \textit{spec} a indicare che si tratta di un \textit{file} contenente test. \\
+Per realizzare i test di unità ho utilizzato gli strumenti nativi di \textit{Angular}. Questo \textit{framework}, e di conseguenza anche \textit{Ionic}, al momento della generazione di un componente genera anche il codice \textit{boilerplate} per l'implementazione di questi test, di cui la \hyperref[img:jasminetest]{Figura 3.14} è un esempio; nello specifico, per ogni \textit{file} contenente codice \textit{TypeScript} viene generato parallelamente un altro \textit{file TypeScript} con lo stesso nome, a cui viene aggiunto il termine \textit{spec} a indicare che si tratta di un \textit{file} contenente test. \\
 
 \begin{minipage}{\linewidth}
+  \label{img:jasminetest}
   \centering
     \includegraphics[height=5cm]{immagini/jasminetest}
   \captionof{figure}{Esempio di test di unità \textit{TypeScript}.}
 \end{minipage} \\
 
-Lo strumento che si occupa del \textit{testing} in \textit{Angular}, e quindi in \textit{Ionic}, è \textbf{Jasmine}\footcite{tec:jasmine}, un software consistente in un \textit{framework} di test per codice \textit{JavaScript} e \textit{TypeScript}; questo viene eseguito tramite il motore \textit{Karma}\footcite{tec:karma}, che si occupa di eseguire i test e di mostrarli su un \textit{browser} tramite un \textit{server} locale, come si può evincere dall'immagine che segue.
+Lo strumento che si occupa del \textit{testing} in \textit{Angular}, e quindi in \textit{Ionic}, è \textbf{Jasmine}\footcite{tec:jasmine}, un software consistente in un \textit{framework} di test per codice \textit{JavaScript} e \textit{TypeScript}; questo viene eseguito tramite il motore \textit{Karma}\footcite{tec:karma}, che si occupa di eseguire i test e di mostrarli su un \textit{browser} tramite un \textit{server} locale, mostrato in \hyperref[img:jasminekarma]{Figura 3.15}.
 
 \begin{minipage}{\linewidth}
+  \label{img:jasminekarma}
   \centering
     \includegraphics[height=6cm]{immagini/jasminekarma}
   \captionof{figure}{Porzione dell'output di \textit{Jasmine} per il corrente progetto.}
@@ -319,29 +339,31 @@ Contemporaneamente all'avvio del processo di verifica ho cominciato anche il pro
 
 \subsection*{Collaudo}
 
-Come anticipato, parallelamente alla realizzazione dei test di unità e all'analisi statica del codice ho anche collaudato l'applicazione su un dispositivo \textit{mobile}. Vale la pena puntualizzare che non ho effettuato la codifica dell'applicazione a \textit{black-box}, ossia senza controllare periodicamente i risultati di quanto sviluppato; il \textit{framework Ionic}, infatti, possiede una funzionalità di \textit{serve}, che permette la ricarica dinamica dell'applicativo ogniqualvolta venga fatta una modifica al codice. Questo applicativo, però, viene visualizzato in locale nella macchina sul quale sta venendo eseguito lo sviluppo, e più nello specifico viene visualizzato e utilizzato tramite \textit{browser web}, come mostrato in foto. Questo è un ottimo strumento di supporto all'attività di codifica, ma non permette di usare l'applicazione su un dispositivo mobile; alcune funzionalità native, infatti, non possono essere utilizzate. \\
+Come anticipato, parallelamente alla realizzazione dei test di unità e all'analisi statica del codice ho anche collaudato l'applicazione su un dispositivo \textit{mobile}. Vale la pena puntualizzare che non ho effettuato la codifica dell'applicazione a \textit{black-box}, ossia senza controllare periodicamente i risultati di quanto sviluppato; il \textit{framework Ionic}, infatti, possiede una funzionalità di \textit{serve}, che permette la ricarica dinamica dell'applicativo ogniqualvolta venga fatta una modifica al codice. Questo applicativo, però, viene visualizzato in locale nella macchina sul quale sta venendo eseguito lo sviluppo, e più nello specifico viene visualizzato e utilizzato tramite \textit{browser web}, mostrato in \hyperref[img:ionicserve]{Figura 3.16}. Questo è un ottimo strumento di supporto all'attività di codifica, ma non permette di usare l'applicazione su un dispositivo mobile; alcune funzionalità native, infatti, non possono essere utilizzate. \\
 
 \begin{minipage}{\linewidth}
+  \label{img:ionicserve}
   \centering
     \includegraphics[height=6.8cm]{immagini/ionicserve}
   \captionof{figure}{Esempio di utilizzo di \textit{ionic serve} su \textit{browser Chromium}.}
 \end{minipage} \\
 
 
-Verso la fine dell'attività di codifica ho quindi dovuto poter testare l'applicazione su uno \textit{smartphone}. Nel fare ciò, però, è sorto un problema: fino a quel momento ho eseguito la componente \textit{back-end}, necessaria al funzionamento della maggior parte delle funzionalità dell'applicazione, in locale sulla mia macchina, e questo mi ha reso impossibile il collaudo su un dispositivo mobile. Al fine di poter eseguire questo collaudo, quindi, ho dovuto effettuare il \textit{deploy} del \textit{server} \textit{back-end} su un \textit{server} aziendale. Per fare ciò, mi è stato proposto dal tutor aziendale di containerizzare tale componente tramite la piattaforma \textit{Docker}. Prima di procedere al collaudo, ho quindi interrotto le attività di codifica e verifica per dedicarmi alla trasposizione su \textit{docker machine} del \textit{back-end}. Ho quindi scritto due \textit{file yml}, di cui l'immagine sottostante è un esempio, necessari al comando \textit{docker-compose} di \textit{Docker} per costruire le corrette macchine \textit{docker} e i rispettivi volumi per la persistenza dei dati. \\
+Verso la fine dell'attività di codifica ho quindi dovuto poter testare l'applicazione su uno \textit{smartphone}. Nel fare ciò, però, è sorto un problema: fino a quel momento ho eseguito la componente \textit{back-end}, necessaria al funzionamento della maggior parte delle funzionalità dell'applicazione, in locale sulla mia macchina, e questo mi ha reso impossibile il collaudo su un dispositivo mobile. Al fine di poter eseguire questo collaudo, quindi, ho dovuto effettuare il \textit{deployment} del \textit{server} \textit{back-end} su un \textit{server} aziendale. Per fare ciò, mi è stato proposto dal tutor aziendale di containerizzare tale componente tramite la piattaforma \textit{Docker}. Prima di procedere al collaudo, ho quindi interrotto le attività di codifica e verifica per dedicarmi alla trasposizione su \textit{docker machine} del \textit{back-end}. Ho quindi scritto due \textit{file yml}, di cui la \hyperref[img:dockeryml]{Figura 3.17} è un esempio, necessari al comando \textit{docker-compose} di \textit{Docker} per costruire le corrette macchine \textit{docker} e i rispettivi volumi per la persistenza dei dati. \\
 
 \begin{minipage}{\linewidth}
+  \label{img:dockeryml}
   \centering
     \includegraphics[height=6.4cm]{immagini/dockeryml}
   \captionof{figure}{Porzione del \textit{docker-compose} per i servizi del \textit{back-end}.}
 \end{minipage} \\
 
-Una volta effettuato il \textit{deploy} su un \textit{server} aziendale, quindi, sono passato al collaudo vero e proprio dell'applicazione. Ho fatto uso dello strumento \textit{Capacitor}\footcite{tec:capacitor}, ossia un \textit{runtime} che permette la trasposizione di codice \textit{TypeScript} utilizzato all'interno di un progetto \textit{Ionic} in un'applicazione \textit{Android}. Questa applicazione consiste in un \textit{wrapper} che effettua il \textit{render} di una \textit{webview} su dispositivi mobili \textit{Android}, e per l'installazione di questa sul mio dispostivo ho utilizzato \textit{adb} (\textit{Android Debug Bridge}), strumento che mi ha permesso di effettuare anche il \textit{debug} dell'applicazione. \\
+Una volta effettuato il \textit{deployment} su un \textit{server} aziendale, quindi, sono passato al collaudo vero e proprio dell'applicazione. Ho fatto uso dello strumento \textit{Capacitor}\footcite{tec:capacitor}, ossia un \textit{runtime} che permette la trasposizione di codice \textit{TypeScript} utilizzato all'interno di un progetto \textit{Ionic} in un'applicazione \textit{Android}. Questa applicazione consiste in un \textit{wrapper} che effettua il \textit{render} di una \textit{webview} su dispositivi mobili \textit{Android}, e per l'installazione di questa sul mio dispostivo ho utilizzato \textit{adb} (\textit{Android Debug Bridge}), strumento che mi ha permesso di effettuare anche il \textit{debug} dell'applicazione. \\
 Ho quindi redatto una lista di funzionalità di cui controllare il comportamento e l'ho seguita, determinando gli accorgimenti da intraprendere per rendere l'applicazione pienamente funzionante e usabile. Ho infine ripreso l'attività di codifica per correggere gli errori e i malfunzionamenti che sono risultati da questo collaudo.
 
 \subsection*{Validazione}
 
-Alla conclusione delle precedenti attività ho analizzato quanto svolto insieme al tutor esterno, in funzione del soddisfacimento dei requisiti definiti. Il lavoro che ho svolto è stato apprezzabile, poiché ho assolto la maggior parte dei requisiti previsti; nella seguente tabella riassumo i risultati ottenuti:
+Alla conclusione delle precedenti attività ho analizzato quanto svolto insieme al tutor esterno, in funzione del soddisfacimento dei requisiti definiti. Il lavoro che ho svolto è stato apprezzabile, poiché ho assolto la maggior parte dei requisiti previsti; nella \hyperref[tab:totale-requisiti-soddifatti]{Tabella 3.3} riassumo i risultati ottenuti.
 
 \begin{table}[h]
   \label{tab:totale-requisiti-soddifatti}
@@ -362,9 +384,10 @@ Da questa tabella si può quindi vedere che la maggior parte dei requisiti è st
 
 \section{Risultati ottenuti}
 
-Una volta terminato lo sviluppo e validato il prodotto da me creato ho prodotto la documentazione tecnica, al fine di rendere il più possibile esplicite le scelte progettuali che ho effettuato e di rendere trasparente il codice all'azienda e a chi, possibilmente, effettuerà uno \textit{stage} basato sulla porzione di prodotto sviluppata da me. Nel fare questo mi sono affidato allo strumento \textit{Compodoc}; questo software, che si presenta come libreria di \textit{npm}, provvede a creare in automatico la documentazione a partire da commenti strutturati e standardizzati al codice, dei quali quello che segue è un esempio.\\
+Una volta terminato lo sviluppo e validato il prodotto da me creato ho prodotto la documentazione tecnica, al fine di rendere il più possibile esplicite le scelte progettuali che ho effettuato e di rendere trasparente il codice all'azienda e a chi, possibilmente, effettuerà uno \textit{stage} basato sulla porzione di prodotto sviluppata da me. Nel fare questo mi sono affidato allo strumento \textit{Compodoc}; questo software, che si presenta come libreria di \textit{npm}, provvede a creare in automatico la documentazione a partire da commenti strutturati e standardizzati al codice, dei quali la \hyperref[img:compodocdoc]{Figura 3.18} è un esempio.\\
 
 \begin{minipage}{\linewidth}
+  \label{img:compodocdoc}
   \centering
     \includegraphics[height=1.5cm]{immagini/compodocdoc}
   \captionof{figure}{Esempio di commento a un metodo per la generazione automatica di documentazione con \textit{Compodoc}.}
